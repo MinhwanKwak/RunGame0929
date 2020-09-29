@@ -8,6 +8,8 @@ public class LevelDirector : MonoBehaviour
 {
     public Button[] LevelButtons;
 
+    public Text[] ClearTexts;
+
     private void Start()
     {
         int levelReadched = PlayerPrefs.GetInt("levelReached", 1);
@@ -24,6 +26,11 @@ public class LevelDirector : MonoBehaviour
             {
   
                 LevelButtons[i].transform.GetChild(3).gameObject.SetActive(true);
+
+                int StageNumber = i + 1;
+                string GetTimeKeyCode = "Stage" + StageNumber;
+                string temp = PlayerPrefs.GetString(GetTimeKeyCode);
+                ClearTexts[i].text = temp;
             }
         }
     }

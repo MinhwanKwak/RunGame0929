@@ -1257,6 +1257,14 @@ MonoBehaviour:
   - {fileID: 1458029850}
   - {fileID: 1076353696}
   - {fileID: 2088879916}
+  ClearTexts:
+  - {fileID: 413458933}
+  - {fileID: 495448769}
+  - {fileID: 1758426136}
+  - {fileID: 707462494}
+  - {fileID: 285839946}
+  - {fileID: 233641291}
+  - {fileID: 772316401}
 --- !u!4 &779873868
 Transform:
   m_ObjectHideFlags: 0

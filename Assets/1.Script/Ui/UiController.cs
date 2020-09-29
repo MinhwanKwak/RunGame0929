@@ -26,6 +26,8 @@ public class UiController : MonoBehaviour
     public float missionCount { get; set; } = 0; // 미션 성공 수
     private float curMisson; // 현재 스테이지 미션 달성률
     private float prexx = -199; // 미션 아이콘 제어용
+
+    public string culTimeCounts;
     #endregion
 
     #region 타임스코어 관련
@@ -61,6 +63,7 @@ public class UiController : MonoBehaviour
 
     // 결과창 미션 확인
     private bool isResultMission = false;
+    
 
     private void Awake()
     {
@@ -114,7 +117,7 @@ public class UiController : MonoBehaviour
         var playerStatus = GameManager.Instance.player.playerStatus;
         if (playerStatus == Player.PlayerStatus.CLEAR || playerStatus == Player.PlayerStatus.DEAD) return;
         timeScroe += Time.deltaTime;
-        string culTimeCounts = timeScroe.ToString("00.00");
+        culTimeCounts = timeScroe.ToString("00.00");
         culTimeCounts = culTimeCounts.Replace(".", ":");
         timeScroeTx.text = $"<b>{culTimeCounts}</b>"; // 현재 타임스코어 출력
     }
@@ -124,12 +127,14 @@ public class UiController : MonoBehaviour
         ResultScreen.SetActive(true);
         if (curMisson >= 60)
         {
+           GameManager.Instance.player.animator.SetTrigger("success");
             print("sucsses");
             Clear.SetActive(true);
             isResultMission = true;
         }
         else
         {
+            GameManager.Instance.player.animator.SetTrigger("fail");
             print("Fail");
             Fail.SetActive(true);
             isResultMission = false;

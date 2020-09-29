@@ -167,6 +167,7 @@ public class Player : MonoBehaviour
                         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                         if (rb.velocity.y == 0)
                         {
+                            animator.SetBool("DoubleJump", false);
                             animator.SetBool("Jump", false);
                         }
 
@@ -195,6 +196,7 @@ public class Player : MonoBehaviour
             checkKey = true; // 키를 누른 상태
             if (isMission)
             {
+               
                 pushedShfitTime += Time.deltaTime;
                // print(pushedShfitTime += Time.deltaTime);
                 if (pushedShfitTime > 0.5f)
@@ -261,6 +263,8 @@ public class Player : MonoBehaviour
         }
         else
         {
+
+            animator.SetBool("DoubleJump", true);
             rb.AddForce(Vector3.up * TwoJumpSpeed , ForceMode.Impulse);
         }
         JumpEffect.gameObject.transform.position = gameObject.transform.position;
@@ -285,7 +289,17 @@ public class Player : MonoBehaviour
                 JumpEffect.SetActive(false);
                 isGround = true;
                 Jumpcount = 2;
-                animator.SetBool("Walk", true);
+
+                if (WalkSpeed >= maxSpeed)
+                {
+                    animator.SetBool("Walk", true);
+                    animator.SetBool("MaxSpeed", false);
+                }
+                else
+                {
+                    animator.SetBool("Walk", false);
+                    animator.SetBool("MaxSpeed", true);
+                }
             }
         }
 
@@ -331,11 +345,13 @@ public class Player : MonoBehaviour
         {
             print("장애물");
 
+
             if (!isObstacleAnim)
             {
                 isObstacleAnim = true;
                 animator.SetTrigger("Damage");
             }
+
 
             if (!isObstacle)
             {
@@ -411,6 +427,8 @@ public class Player : MonoBehaviour
             print("끝(트리거)");
             playerStatus = PlayerStatus.CLEAR;
             rb.velocity = Vector3.zero;
+            string CurrentSceneName = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts);
             uiController.ShowResult();
             //animator.StopPlayback();
             animator.speed = 0;
@@ -461,6 +479,7 @@ public class Player : MonoBehaviour
             // 미션 가능 여부 채킹
             if ((checkKey && isMission) || playerStatus == PlayerStatus.DASH)
             {
+                animator.SetTrigger("SendMail");
                 print("미션성공");
                 missonCheck = true;
                 // 우편물 카운트 감소
@@ -573,6 +592,7 @@ public class Player : MonoBehaviour
          Materialobj.GetComponent<Renderer>().materials[1].SetColor("_BaseColor", new Color32(255, 255, 255, 255));
         Materialobj.GetComponent<Renderer>().material.SetColor("_BaseColor", new Color32(255, 255, 255, 255));
 
+        isObstacleAnim = false;
         isObstacle = true;
         //invincibility = false;
         
