@@ -121,14 +121,17 @@ public class Player : MonoBehaviour
 
     private bool isObstacle = true;
 
+    private bool isObstacleAnim = false;
+
     public float pushedShfitTime; // 쉬프트를 누른 시간 체크용
-    public bool isMisson = true; // 미션 수행 가능 확인
+    public bool isMission = true; // 미션 수행 가능 확인
     public bool checkKey = false;
 
     private void Awake()
     {
         GameManager.Instance.player = this;
     }
+
     void Start()
     {
         JumpEffect.SetActive(false);
@@ -190,17 +193,17 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             checkKey = true; // 키를 누른 상태
-            if (isMisson)
+            if (isMission)
             {
                 pushedShfitTime += Time.deltaTime;
                // print(pushedShfitTime += Time.deltaTime);
                 if (pushedShfitTime > 0.5f)
-                    isMisson = false;
+                    isMission = false;
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            isMisson = true;
+            isMission = true;
             checkKey = false; // 키를 떈 상태
             pushedShfitTime = 0f; // 초기화
         }
@@ -208,6 +211,7 @@ public class Player : MonoBehaviour
         if(playerStatus == PlayerStatus.DEAD)
             animator.speed = 0;
     }
+
     // 물리 이동,점프 처리
     private void FixedUpdate()
     {
@@ -327,7 +331,13 @@ public class Player : MonoBehaviour
         {
             print("장애물");
 
-            if(!isObstacle)
+            if (!isObstacleAnim)
+            {
+                isObstacleAnim = true;
+                animator.SetTrigger("Damage");
+            }
+
+            if (!isObstacle)
             {
                 return;
             }
@@ -350,8 +360,7 @@ public class Player : MonoBehaviour
             // 죽음 판정
             checkedDead();
             uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
-
-            
+           
             //무적
             invincibility = true;
 
@@ -450,7 +459,7 @@ public class Player : MonoBehaviour
             // 우편물을 소지하고 있지 않으면
             if (uiController.mailCount <= 0) return;
             // 미션 가능 여부 채킹
-            if ((checkKey && isMisson) || playerStatus == PlayerStatus.DASH)
+            if ((checkKey && isMission) || playerStatus == PlayerStatus.DASH)
             {
                 print("미션성공");
                 missonCheck = true;

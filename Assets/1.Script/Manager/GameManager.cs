@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public bool isPauseTutorial; // 튜토리얼 일시정지 체크
     public bool isGameOver = false;
+
+    public int levelToUnlock = 2;
 
     private void Awake()
     {
@@ -31,5 +34,18 @@ public class GameManager : MonoBehaviour
         // GameOver();
     }
 
+    public void WinLevel(bool mission)
+    {
+
+        if (mission)
+        {
+            PlayerPrefs.SetInt("levelReached", levelToUnlock);
+           // SceneManager.LoadScene("SelectScene");
+        }
+        else
+        {
+            Debug.Log("미션실패");
+        }
+    }
 
 }

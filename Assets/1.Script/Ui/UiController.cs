@@ -59,6 +59,9 @@ public class UiController : MonoBehaviour
     [SerializeField, Header("현재 플레이어 이동속도")]
     private Text testTx;
 
+    // 결과창 미션 확인
+    private bool isResultMission = false;
+
     private void Awake()
     {
         // 게임이 시작될 때 우편물 시스템 존이 몇개 있는 지 파악
@@ -123,14 +126,17 @@ public class UiController : MonoBehaviour
         {
             print("sucsses");
             Clear.SetActive(true);
+            isResultMission = true;
         }
         else
         {
             print("Fail");
             Fail.SetActive(true);
+            isResultMission = false;
         }
         resultTimeTx.text = timeScroeTx.text;
         resultMissonTx.text = missionTx.text;
+        GameManager.Instance.WinLevel(isResultMission);
     }
 
     public void GameOver()
@@ -189,7 +195,7 @@ public class UiController : MonoBehaviour
             Time.timeScale = 1;
             isPause = false;
         }
-        LoadingManager.instance.beforeSceneSetup(SceneName);
+        LoadingManager.instance.beforeSceneSetup("LoadScene");
     } 
     #endregion
 }

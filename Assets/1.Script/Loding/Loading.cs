@@ -9,7 +9,7 @@ public class Loading : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
+       // Cursor.visible = false;
         StartCoroutine(loadAsynSystem());
     }
 
