@@ -35,10 +35,9 @@ public class LevelDirector : MonoBehaviour
         }
     }
 
-    public void StageSceneMove(int number)
+    public void StageSceneMove(string sceneName)
     {
-        
-        SceneManager.LoadScene(number);
+        LoadingManager.instance.beforeSceneSetup(sceneName);
     }
 
 

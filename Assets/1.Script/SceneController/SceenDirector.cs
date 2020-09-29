@@ -24,7 +24,7 @@ public class SceenDirector : MonoBehaviour
 
     public void StartNewScene()
     {
-        SceneManager.LoadScene("Stage1");
+        LoadingManager.instance.beforeSceneSetup("Stage1");
     }
 
     public void LoadScene()
