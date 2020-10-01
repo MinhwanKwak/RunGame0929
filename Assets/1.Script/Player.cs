@@ -180,7 +180,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        updateMissonResultPos(); // 테스트용
+      //  updateMissonResultPos(); // 테스트용
 
         if(playerStatus != PlayerStatus.DASH)
         {
@@ -289,17 +289,6 @@ public class Player : MonoBehaviour
                 JumpEffect.SetActive(false);
                 isGround = true;
                 Jumpcount = 2;
-
-                if (WalkSpeed >= maxSpeed)
-                {
-                    animator.SetBool("Walk", true);
-                    animator.SetBool("MaxSpeed", false);
-                }
-                else
-                {
-                    animator.SetBool("Walk", false);
-                    animator.SetBool("MaxSpeed", true);
-                }
             }
         }
 
@@ -309,6 +298,21 @@ public class Player : MonoBehaviour
             {
                 playerStatus = PlayerStatus.GROUND;
                 Physics.gravity = new Vector3(0, -9.81f, 0);
+            }
+
+            if (playerStatus != PlayerStatus.DASH)
+            {
+                // 최고 속도로 도달했을 때 맥스 스피드 애니를 출력함
+                if (WalkSpeed >= maxSpeed)
+                {
+                    animator.SetBool("Walk", false);
+                    animator.SetBool("MaxSpeed", true);
+                }
+                else
+                {
+                    animator.SetBool("Walk", true);
+                    animator.SetBool("MaxSpeed", false);
+                }
             }
         }
     }
@@ -358,11 +362,6 @@ public class Player : MonoBehaviour
                 return;
             }
 
-            // 무적, 대쉬 상태일 경우 피격 판정 처리를 하지 않음 (수시로 들어오는 ground 판정떄문에 먹히지 않는다)
-           // if (playerStatus == PlayerStatus.INVINCIBILITY || playerStatus == PlayerStatus.DASH)
-            //{
-            //    return;
-            //}
             StartCoroutine(startKnockback());
 
             // ui 카운트 감소
@@ -427,14 +426,22 @@ public class Player : MonoBehaviour
             print("끝(트리거)");
             playerStatus = PlayerStatus.CLEAR;
             rb.velocity = Vector3.zero;
-            string CurrentSceneName = SceneManager.GetActiveScene().name;
-            PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts);
-            uiController.ShowResult();
+            animator.SetTrigger("success");
+            StartCoroutine(endResult());
             //animator.StopPlayback();
-            animator.speed = 0;
+           // animator.speed = 0;
             if (!rb.useGravity) // 중력 무시 상태일 때
                 rb.useGravity = true;
         }
+    }
+
+    // 마무리 동작을 수행한 후 결과가 보여지도록 함 
+    IEnumerator endResult()
+    {
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Success") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
+        string CurrentSceneName = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); // 베스트 스코어만 저장되도록 변경해야할듯
+        uiController.ShowResult();
     }
 
     IEnumerator startKnockback()
@@ -479,7 +486,10 @@ public class Player : MonoBehaviour
             // 미션 가능 여부 채킹
             if ((checkKey && isMission) || playerStatus == PlayerStatus.DASH)
             {
-                animator.SetTrigger("SendMail");
+                // 대쉬 상태에서 성공한 미션은 애니가 출력되지 않도록 함
+                if(playerStatus != PlayerStatus.DASH)
+                    animator.SetTrigger("SendMail");
+
                 print("미션성공");
                 missonCheck = true;
                 // 우편물 카운트 감소
