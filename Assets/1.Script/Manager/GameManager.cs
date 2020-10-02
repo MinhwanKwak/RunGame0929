@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public CameraManager cameraManager;
+    public CinemachineShake cinemachineShake; // 카메라 제어용 스크립트
     public Player player;
     public UiController uiController;
     public TutorialTrigger[] tutorialTrigger;

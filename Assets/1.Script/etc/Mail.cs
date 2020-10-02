@@ -6,6 +6,6 @@ public class Mail : MonoBehaviour
 {
     void Update()
     {
-        transform.Rotate(0, -1.5f, 0, Space.Self);
+        transform.Rotate(0, 0, -1.5f, Space.Self);
     }
 }
