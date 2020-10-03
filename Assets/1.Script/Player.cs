@@ -513,10 +513,16 @@ public class Player : MonoBehaviour
                     GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
                 }
 
-                //미션 결과 활성화
-                uiController.missionResultTx.text = "성공";
-                uiController.missionResultTx.color = new Color32(0, 0, 255, 180);
-                StartCoroutine(MissonResultAtive());
+                ////미션 결과 활성화
+                //uiController.missionResultTx.text = "성공";
+                //uiController.missionResultTx.color = new Color32(0, 0, 255, 180);
+                //StartCoroutine(MissonResultAtive());
+
+                if(SceneManager.GetActiveScene().name != "Stage1")
+                {
+                    //미션 결과 말풍선 출력
+                    uiController.RandomMissionSpeechBubble();
+                }
 
                 // 미션 카운트 증가
                 uiController.missionCount++;

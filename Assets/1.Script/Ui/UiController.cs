@@ -10,7 +10,7 @@ public class UiController : MonoBehaviour
     [SerializeField,Header("우편물")]
     private Text mailTx; // 우편물
     [SerializeField, Tooltip("현재 씬 우편물 시스템 개수")]
-    private float culMissonMax = 0;
+    private float culMissionMax = 0;
     public float mailCount { get; set; } = 5; // 우편물 개수
     #endregion
 
@@ -24,10 +24,19 @@ public class UiController : MonoBehaviour
     [Header("미션 결과")]
     public Text missionResultTx;
     public float missionCount { get; set; } = 0; // 미션 성공 수
-    private float curMisson; // 현재 스테이지 미션 달성률
+    private float curMission; // 현재 스테이지 미션 달성률
     private float prexx = -199; // 미션 아이콘 제어용
-
     public string culTimeCounts;
+    [SerializeField, Header("말풍선이미지")]
+    private Sprite[] missionSpeechBubbleSprite = new Sprite[3];
+    [SerializeField, Header("말풍선오브젝트")]
+    private Image missionSpeechBubbleObj;
+    // 말풍선 enum
+    private enum God_kind
+    {
+        God1, God2, God3
+    }
+
     #endregion
 
     #region 타임스코어 관련
@@ -68,8 +77,8 @@ public class UiController : MonoBehaviour
     private void Awake()
     {
         // 게임이 시작될 때 우편물 시스템 존이 몇개 있는 지 파악
-        GameObject[] misson = GameObject.FindGameObjectsWithTag("Misson");
-        culMissonMax = misson.Length;
+        GameObject[] mission = GameObject.FindGameObjectsWithTag("Misson");
+        culMissionMax = mission.Length;
         GameManager.Instance.uiController = this;
     }
 
@@ -77,38 +86,69 @@ public class UiController : MonoBehaviour
     {
         mailTx.text = $"{mailCount}"; // 현재 우편물 개수 출력
         testTx.text = $"스피드 : {GameManager.Instance.player.WalkSpeed}";
-        MissonAchievementQuotient();
-        SetMissonBar();
+        MissionAchievementQuotient();
+        SetMissionBar();
         TimeScore();
         GamePause(); // 일시정지
+        if (SceneManager.GetActiveScene().name != "Stage1")
+        {
+            ShowMissionSpeechBubble();
+        }
     }
 
     // 미션 달성률 이미지와 아이콘
-    private void SetMissonBar()
+    private void SetMissionBar()
     {
         // 현재 Hp를 0~1 사이의 수로 표현
-        float culMissonSuccess = missionCount / culMissonMax;
+        float culMissionSuccess = missionCount / culMissionMax;
 
-        culMissonSuccess = Mathf.Clamp(culMissonSuccess, 0, 1);
+        culMissionSuccess = Mathf.Clamp(culMissionSuccess, 0, 1);
 
         // 게이지 증가 감소
         if (missionBar != null)
-            missionBar.fillAmount = Mathf.Lerp(missionBar.fillAmount, culMissonSuccess, 2 * Time.deltaTime);
+            missionBar.fillAmount = Mathf.Lerp(missionBar.fillAmount, culMissionSuccess, 2 * Time.deltaTime);
 
         // 미션아이콘 처리
-        float rexx = Mathf.Lerp(-199, 331, culMissonSuccess);
+        float rexx = Mathf.Lerp(-199, 331, culMissionSuccess);
         prexx = Mathf.Lerp(prexx, rexx, Time.deltaTime*2f);
         missionIcon.localPosition = new Vector3(34, prexx, 0);
     }
 
     // 미션 달성률 텍스트
-    private void MissonAchievementQuotient()
+    private void MissionAchievementQuotient()
     {
         // 현재 미션 달성률
-        curMisson = (missionCount / culMissonMax) * 100;
-        curMisson = Mathf.Clamp(curMisson, 0, 100);
-        string culMissonCounts = string.Format("{0:N0}", curMisson);
-        missionTx.text = $"{culMissonCounts}%"; // 현재 미션 달성률 출력
+        curMission = (missionCount / culMissionMax) * 100;
+        curMission = Mathf.Clamp(curMission, 0, 100);
+        string culMissionCounts = string.Format("{0:N0}", curMission);
+        missionTx.text = $"{culMissionCounts}%"; // 현재 미션 달성률 출력
+    }
+
+    private float showTime = 0;
+
+    // 미션 말풍선 출력
+    private void ShowMissionSpeechBubble()
+    {
+        if(showTime >= 0)
+        {
+            missionSpeechBubbleObj.gameObject.SetActive(true); // 이미지 출력
+            showTime -= Time.deltaTime;
+        }
+        else
+            missionSpeechBubbleObj.gameObject.SetActive(false);
+    }
+
+    // 미션 말풍선 랜덤 값 할당
+    public void RandomMissionSpeechBubble()
+    {
+        missionSpeechBubbleObj.gameObject.SetActive(false);
+        // 말풍선 랜덤출력
+        God_kind god_Kind = (God_kind)Random.Range((int)God_kind.God1, (int)God_kind.God3 + 1);
+        // 랜덤 이미지 할당
+        missionSpeechBubbleObj.sprite = missionSpeechBubbleSprite[(int)god_Kind];
+        missionSpeechBubbleObj.SetNativeSize();
+
+        showTime += 1f;
     }
 
     // 타임 스코어 출력
@@ -122,10 +162,11 @@ public class UiController : MonoBehaviour
         timeScroeTx.text = $"<b>{culTimeCounts}</b>"; // 현재 타임스코어 출력
     }
 
+    // 결과창 출력
     public void ShowResult()
     {
         ResultScreen.SetActive(true);
-        if (curMisson >= 60)
+        if (curMission >= 60)
         {
            GameManager.Instance.player.animator.SetTrigger("success");
             print("sucsses");
