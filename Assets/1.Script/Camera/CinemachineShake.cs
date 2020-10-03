@@ -23,6 +23,7 @@ public class CinemachineShake : MonoBehaviour
     private float FieldOfViewSize = 0;
 
     public float InitFieldOfViewSize; // 해당 씬 기존 카메라 뷰 사이즈
+    private float culFieldOfViewSize; // 해당 씬 현재 카메라 뷰 사이즈
 
     // 초기화
     private void Awake()
@@ -48,7 +49,7 @@ public class CinemachineShake : MonoBehaviour
         //}
 
         if (Input.GetKeyDown(KeyCode.A))
-            SetFieldOfViewSizeParameters(2, VirtualCamera.m_Lens.FieldOfView+1);
+            SetFieldOfViewSizeParameters(2, +1);
 
         if (Input.GetKeyDown(KeyCode.S))
             SetFieldOfViewSizeParameters(2, VirtualCamera.m_Lens.FieldOfView-1);
@@ -92,6 +93,8 @@ public class CinemachineShake : MonoBehaviour
     {
         if (VirtualCamera != null)
         {
+            if (GameManager.Instance.player.playerStatus == Player.PlayerStatus.DEAD || GameManager.Instance.player.playerStatus == Player.PlayerStatus.CLEAR) return;
+
             // Field Of View 사이즈 변경 효과가 재생 중일 때
             if (FVchangeDuration > 0)
             {
@@ -104,9 +107,13 @@ public class CinemachineShake : MonoBehaviour
             }
             else
             {
-                // 해당 이팩트가 끝났을 때, 값을 리셋해준다
-                VirtualCamera.m_Lens.FieldOfView
-                    = Mathf.Lerp(VirtualCamera.m_Lens.FieldOfView, InitFieldOfViewSize, Time.deltaTime);
+                if (GameManager.Instance.player.playerStatus == Player.PlayerStatus.DASH)
+                {
+                    // 해당 이팩트가 끝났을 때, 값을 리셋해준다
+                    VirtualCamera.m_Lens.FieldOfView
+                        = Mathf.Lerp(VirtualCamera.m_Lens.FieldOfView, culFieldOfViewSize, Time.deltaTime);
+                }
+
                 FVchangeDuration = 0;
             }
         }
@@ -146,7 +153,8 @@ public class CinemachineShake : MonoBehaviour
     public void SetFieldOfViewSizeParameters(float time, float Size)
     {
         FVchangeDuration = time;  // 대쉬 지속시간을 넣을 것
-        FieldOfViewSize = Size;
+        FieldOfViewSize = VirtualCamera.m_Lens.FieldOfView+Size;
+        culFieldOfViewSize = VirtualCamera.m_Lens.FieldOfView;
     }
     #endregion
 }
