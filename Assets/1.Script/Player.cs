@@ -126,6 +126,7 @@ public class Player : MonoBehaviour
     public float pushedShfitTime; // 쉬프트를 누른 시간 체크용
     public bool isMission = true; // 미션 수행 가능 확인
     public bool checkKey = false;
+    private bool isDash = false;
 
     private void Awake()
     {
@@ -136,8 +137,7 @@ public class Player : MonoBehaviour
     {
         JumpEffect.SetActive(false);
 
-        startJumpcount = Jumpcount;
-        
+        startJumpcount = Jumpcount;        
     }
 
     void Update()
@@ -195,8 +195,7 @@ public class Player : MonoBehaviour
         {
             checkKey = true; // 키를 누른 상태
             if (isMission)
-            {
-               
+            {               
                 pushedShfitTime += Time.deltaTime;
                // print(pushedShfitTime += Time.deltaTime);
                 if (pushedShfitTime > 0.5f)
@@ -223,7 +222,6 @@ public class Player : MonoBehaviour
                 if (playerStatus == PlayerStatus.DASH) return;
 
                 Jump();
-
             }
 
 
@@ -259,13 +257,18 @@ public class Player : MonoBehaviour
         playerStatus = PlayerStatus.JUMP;
         if(Jumpcount == 2)
         {
-            rb.AddForce(Vector3.up * OneJumpSpeed, ForceMode.Impulse);
+            if (playerStatus != PlayerStatus.DASH)
+            {
+                rb.AddForce(Vector3.up * OneJumpSpeed, ForceMode.Impulse);
+            }
         }
         else
         {
-
-            animator.SetBool("DoubleJump", true);
-            rb.AddForce(Vector3.up * TwoJumpSpeed , ForceMode.Impulse);
+            if (playerStatus != PlayerStatus.DASH && isDash == false)
+            {
+                animator.SetBool("DoubleJump", true);
+                rb.AddForce(Vector3.up * TwoJumpSpeed, ForceMode.Impulse);
+            }
         }
         JumpEffect.gameObject.transform.position = gameObject.transform.position;
        
@@ -297,9 +300,16 @@ public class Player : MonoBehaviour
             if (playerStatus == PlayerStatus.DASH)
             {
                 playerStatus = PlayerStatus.GROUND;
+                isDash = false;
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
+        }
+    }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
             if (playerStatus != PlayerStatus.DASH)
             {
                 // 최고 속도로 도달했을 때 맥스 스피드 애니를 출력함
@@ -337,8 +347,7 @@ public class Player : MonoBehaviour
                 if (playerStatus == PlayerStatus.DASH) return;
                 WalkSpeed++;
                 WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
-                //float culWalkSpeed = WalkSpeed++;
-                //WalkSpeed = Mathf.Lerp(WalkSpeed, culWalkSpeed, Time.deltaTime * 2);
+                GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, +1); // 카메라 줌아웃 
             }
             // 우편물 삭제
             Destroy(other.gameObject);
@@ -368,6 +377,7 @@ public class Player : MonoBehaviour
             float Damage = Mathf.Ceil((uiController.mailCount * damagePercnt1)); // 퍼센트로 나눈 값의 소수점 올림 처리하여 감소
             WalkSpeed--;
             WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
+            GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌아웃 
             if (uiController.mailCount == 0)
                 uiController.mailCount -= 1f;
             else
@@ -396,6 +406,7 @@ public class Player : MonoBehaviour
             ItemEatPos.y += ItemEatheight;
             // 아이템 삭제
             Destroy(other.gameObject);
+            GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(fever+0.01f, 10); // 카메라 줌아웃 
         }
 
         // 리스폰 저장
@@ -410,6 +421,7 @@ public class Player : MonoBehaviour
             float Damage = Mathf.Ceil((uiController.mailCount * damagePercnt2)); // 퍼센트로 나눈 값의 소수점 올림 처리하여 감소(50%)
             WalkSpeed--;
             WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
+            GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
             if (uiController.mailCount == 0)
                 uiController.mailCount -= 1f;
             else
@@ -498,12 +510,19 @@ public class Player : MonoBehaviour
                 if (uiController.mailCount >= 5 && WalkSpeed != 1)
                 {
                     WalkSpeed--;
+                    GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
                 }
 
-                //미션 결과 활성화
-                uiController.missionResultTx.text = "성공";
-                uiController.missionResultTx.color = new Color32(0, 0, 255, 180);
-                StartCoroutine(MissonResultAtive());
+                ////미션 결과 활성화
+                //uiController.missionResultTx.text = "성공";
+                //uiController.missionResultTx.color = new Color32(0, 0, 255, 180);
+                //StartCoroutine(MissonResultAtive());
+
+                if(SceneManager.GetActiveScene().name != "Stage1")
+                {
+                    //미션 결과 말풍선 출력
+                    uiController.RandomMissionSpeechBubble();
+                }
 
                 // 미션 카운트 증가
                 uiController.missionCount++;
@@ -545,6 +564,8 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         // 상태 변경
         playerStatus = PlayerStatus.DASH;
+
+        isDash = true;
 
         // 중력 무시
         rb.useGravity = false;
