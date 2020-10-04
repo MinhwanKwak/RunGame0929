@@ -452,7 +452,37 @@ public class Player : MonoBehaviour
     {
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Success") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
         string CurrentSceneName = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); // 베스트 스코어만 저장되도록 변경해야할듯
+
+        //string float 변환 작업 
+        string Scorefloat = uiController.culTimeCounts;
+        Scorefloat = Scorefloat.Replace(":", "");
+
+        float CurrenrtScore = float.Parse(Scorefloat);
+
+        Scorefloat = PlayerPrefs.GetString(CurrentSceneName);
+
+        if(Scorefloat != "")
+        {
+            Scorefloat = Scorefloat.Replace(":", "");
+
+            string SaveScroe = Scorefloat;
+
+            float TempScore = float.Parse(SaveScroe);
+
+            if (CurrenrtScore <= TempScore)
+            {
+                PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); // 베스트 스코어만 저장되도록 변경해야할듯
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); // 베스트 스코어만 저장되도록 변경해야할듯
+        }
+
+
+
+
+
         uiController.ShowResult();
     }
 
