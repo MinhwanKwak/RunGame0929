@@ -6502,7 +6502,7 @@ PrefabInstance:
     - target: {fileID: 9153783934163241687, guid: 7730cdd149f823c498bbdf01ba20214a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 272.63
+      value: 276.43
       objectReference: {fileID: 0}
     - target: {fileID: 9153783934163241687, guid: 7730cdd149f823c498bbdf01ba20214a,
         type: 3}
@@ -7630,7 +7630,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1293500869}
   m_Lens:
-    FieldOfView: 34.73669
+    FieldOfView: 32.02879
     OrthographicSize: 38.53339
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -16565,7 +16565,7 @@ PrefabInstance:
     - target: {fileID: 196335176389175155, guid: ff3a58b106c21404b99815024b88b1bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1784
+      value: -2.077
       objectReference: {fileID: 0}
     - target: {fileID: 196335176389175155, guid: ff3a58b106c21404b99815024b88b1bc,
         type: 3}
@@ -17733,7 +17733,7 @@ Camera:
   m_GameObject: {fileID: 376034721}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.0129049495, g: 0.04547882, b: 0.09433961, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -17749,7 +17749,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 34.73669
+  field of view: 32.02879
   orthographic: 0
   orthographic size: 30.95159
   m_Depth: -1
@@ -25193,7 +25193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586771568}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: CameraManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25213,7 +25213,7 @@ Transform:
   - {fileID: 376034722}
   - {fileID: 218385598}
   m_Father: {fileID: 1547961600}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586778990
 GameObject:
@@ -53787,7 +53787,7 @@ PrefabInstance:
     - target: {fileID: 9153783934163241687, guid: 7730cdd149f823c498bbdf01ba20214a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 311.67
+      value: 318.95
       objectReference: {fileID: 0}
     - target: {fileID: 9153783934163241687, guid: 7730cdd149f823c498bbdf01ba20214a,
         type: 3}
@@ -60703,7 +60703,6 @@ Transform:
   m_LocalPosition: {x: 826.3605, y: 351.13586, z: -191.2949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1673003253}
   - {fileID: 586771568}
   - {fileID: 1994077274}
   - {fileID: 1679568257}
@@ -64297,51 +64296,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d5258e1f51dcb54f852aab059187c32, type: 3}
---- !u!1 &1673003252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1673003253}
-  - component: {fileID: 1673003254}
-  m_Layer: 0
-  m_Name: DesManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1673003253
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673003252}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -824.3185, y: -348.72705, z: 189.02756}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1547961600}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1673003254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673003252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a160616c47695b04f9f66991710a4cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questName: 
-  npcId: 
 --- !u!4 &1673700063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4a3d8b8a79481314f916a8559f176062,
