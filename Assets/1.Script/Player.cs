@@ -128,6 +128,22 @@ public class Player : MonoBehaviour
     public bool checkKey = false;
     private bool isDash = false;
 
+    private GameObject PostBox;
+
+    public GameObject LetterPosition;
+
+    //날아가는 우편물 script 
+    public GameObject LetterObj;
+
+
+    //우편물 layer를 검출하기 위한 layermask
+    public LayerMask PostBoxLayerMask;
+
+    private GiveLetter giveLetter;
+
+    private bool isPostBoxcheck = true;
+
+
     private void Awake()
     {
         GameManager.Instance.player = this;
@@ -320,7 +336,6 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    animator.SetBool("Walk", true);
                     animator.SetBool("MaxSpeed", false);
                 }
             }
@@ -534,6 +549,9 @@ public class Player : MonoBehaviour
 
                 print("미션성공");
                 missonCheck = true;
+                FindPostBox();
+                //10m내에 우체통을찾는 ray를 쏜다.
+               
                 // 우편물 카운트 감소
                 uiController.mailCount--;
                 uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
@@ -562,6 +580,30 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    void FindPostBox()
+    {
+        Collider[] t_cols = Physics.OverlapSphere(transform.position, 15f,PostBoxLayerMask);
+        
+        for(int i = 0;  i  < t_cols.Length; ++i)
+        {
+            if(t_cols[i].gameObject.CompareTag("PostBox") && isPostBoxcheck)
+            {
+                isPostBoxcheck = false;
+
+              GameObject letter =  Instantiate(LetterObj);
+
+                letter.transform.position = LetterPosition.transform.position;
+
+              giveLetter = letter.GetComponent<GiveLetter>();
+
+                giveLetter.GetPostBox(t_cols[i].gameObject);
+            }
+        }
+
+        isPostBoxcheck = true;
+    }
+
 
     private void OnTriggerExit(Collider other)
     {
