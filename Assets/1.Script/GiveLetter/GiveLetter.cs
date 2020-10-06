@@ -59,7 +59,6 @@ public class GiveLetter : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
-
         }
     }
 

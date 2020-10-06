@@ -42,24 +42,12 @@ public class CinemachineShake : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKey(KeyCode.D))
-        //{
-        //    SetShakeParameters(0.8f, 5f, 5);
-        //    SetOrthographicSizeParameters(0.8f, 16f);
-        //}
+        if (Input.GetKey(KeyCode.D))
+        {
+            SetShakeParameters(0.5f, 1f, 0.5f);
+        }
 
-        if (Input.GetKeyDown(KeyCode.A))
-            SetFieldOfViewSizeParameters(2, +1);
-
-        if (Input.GetKeyDown(KeyCode.S))
-            SetFieldOfViewSizeParameters(2, VirtualCamera.m_Lens.FieldOfView-1);
-
-        if (Input.GetKeyDown(KeyCode.D))
-            SetFieldOfViewSizeParameters(2, VirtualCamera.m_Lens.FieldOfView +13);
-
-      //  ChangeFieldOfViewSize();
-
-       // ShakeCinemachineEffect();
+        ShakeCinemachineEffect();
 
        CinemachineFieldOfViewSizeEffect();
     }

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1374,17 +1374,17 @@ PrefabInstance:
     - target: {fileID: 5147634593541809834, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5147634593541809834, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5147634593541809834, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5761425008633596973, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
@@ -1506,30 +1506,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5761425009617130719, guid: 8f3f2a395b54efb44859395546945f7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5761425009993767564, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5761425009993767564, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5761425009993767564, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5761425010141133201, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5761425010141133201, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6070743590429454476, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
@@ -1539,12 +1544,12 @@ PrefabInstance:
     - target: {fileID: 7240010203096230361, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7240010203096230361, guid: 8f3f2a395b54efb44859395546945f7c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3f2a395b54efb44859395546945f7c, type: 3}

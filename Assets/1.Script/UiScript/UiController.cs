@@ -66,9 +66,6 @@ public class UiController : MonoBehaviour
 
     [SerializeField, Header("현재 씬 이름")]
     private string SceneName;
-    // 테스트용
-    [SerializeField, Header("현재 플레이어 이동속도")]
-    private Text testTx;
 
     // 결과창 미션 확인
     private bool isResultMission = false;
@@ -85,7 +82,7 @@ public class UiController : MonoBehaviour
     private void Update()
     {
         mailTx.text = $"{mailCount}"; // 현재 우편물 개수 출력
-        testTx.text = $"스피드 : {GameManager.Instance.player.WalkSpeed}";
+        mailTx.color= mailCount > 0 ? Color.white : Color.red; // 현재 우편물 개수 출력
         MissionAchievementQuotient();
         SetMissionBar();
         TimeScore();
