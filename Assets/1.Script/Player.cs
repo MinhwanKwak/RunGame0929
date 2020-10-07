@@ -229,6 +229,10 @@ public class Player : MonoBehaviour
             animator.speed = 0;
 
         dashEffect.transform.position = new Vector3(dashEffect.transform.position.x, transform.position.y+0.2f, dashEffect.transform.position.z);
+        if (WalkSpeed >= maxSpeed)
+            dashEffect.SetActive(true);
+        else
+            dashEffect.SetActive(false);
     }
 
     // 물리 이동,점프 처리
@@ -336,12 +340,12 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("Walk", false);
                     animator.SetBool("MaxSpeed", true);
-                    dashEffect.SetActive(true);
+                  // dashEffect.SetActive(true);
                 }
                 else
                 {
                     animator.SetBool("MaxSpeed", false);
-                    dashEffect.SetActive(false);
+                   // dashEffect.SetActive(false);
                 }
             }
         }
@@ -422,9 +426,16 @@ public class Player : MonoBehaviour
             //플레이어 현재 위치
             ItemEatPos = transform.position;
             ItemEatPos.y += ItemEatheight;
-            // 아이템 삭제
-            Destroy(other.gameObject);
+            // 아이템 비활성화
+            other.gameObject.SetActive(false);
+            StartCoroutine(ActiveItem()); // 2초 뒤 활성화
             GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(fever+0.01f, 10); // 카메라 줌아웃 
+
+            IEnumerator ActiveItem()
+            {
+                yield return new WaitForSeconds(2f);
+                other.gameObject.SetActive(true);
+            }
         }
 
         // 리스폰 저장
