@@ -24,11 +24,11 @@ public class Player : MonoBehaviour
     public float WalkSpeed = 10f;
     // clamp 조절용
     [SerializeField,Range(5,15)]
-    private int minSpeed = 4;
+    private int minSpeed;
     [SerializeField, Range(5, 15)]
-    private int maxSpeed = 9;
+    private int maxSpeed;
     [SerializeField, Range(10, 25)]
-    private int feverSpeed = 15;
+    private int feverSpeed;
 
 
     //jump 1단 
@@ -108,8 +108,8 @@ public class Player : MonoBehaviour
     [SerializeField, Header("피버타임 시간")]
     private float fever = 2f;
 
-    [SerializeField, Header("피버이펙트")]
-    private GameObject feverEffect;
+    [SerializeField, Header("대쉬, 피버 이펙트")]
+    private GameObject dashEffect;
 
     [SerializeField, Header("아이템먹었을 때 위로 올라가는 높이")]
     private float ItemEatheight =1f;
@@ -227,6 +227,8 @@ public class Player : MonoBehaviour
 
         if(playerStatus == PlayerStatus.DEAD)
             animator.speed = 0;
+
+        dashEffect.transform.position = new Vector3(dashEffect.transform.position.x, transform.position.y+0.2f, dashEffect.transform.position.z);
     }
 
     // 물리 이동,점프 처리
@@ -317,6 +319,7 @@ public class Player : MonoBehaviour
             {
                 playerStatus = PlayerStatus.GROUND;
                 isDash = false;
+                dashEffect.SetActive(false); // 이펙트 비활성화
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
         }
@@ -333,10 +336,12 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("Walk", false);
                     animator.SetBool("MaxSpeed", true);
+                    dashEffect.SetActive(true);
                 }
                 else
                 {
                     animator.SetBool("MaxSpeed", false);
+                    dashEffect.SetActive(false);
                 }
             }
         }
@@ -377,9 +382,9 @@ public class Player : MonoBehaviour
             if (!isObstacleAnim)
             {
                 isObstacleAnim = true;
-                animator.SetTrigger("Damage");
+                if(isObstacleAnim && playerStatus != PlayerStatus.JUMP) // 점프 때는 넉백애니 출력되지 않도록 함
+                    animator.SetTrigger("Damage");
             }
-
 
             if (!isObstacle)
             {
@@ -390,8 +395,6 @@ public class Player : MonoBehaviour
 
             // ui 카운트 감소
             float Damage = Mathf.Ceil((uiController.mailCount * damagePercnt1)); // 퍼센트로 나눈 값의 소수점 올림 처리하여 감소
-            WalkSpeed--;
-            WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
             GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌아웃 
             if (uiController.mailCount == 0)
                 uiController.mailCount -= 1f;
@@ -415,7 +418,7 @@ public class Player : MonoBehaviour
             // 속도 증가
             StartCoroutine(feverTime());
             // 이펙트 활성화
-          //  feverEffect.SetActive(true);
+            dashEffect.SetActive(true);
             //플레이어 현재 위치
             ItemEatPos = transform.position;
             ItemEatPos.y += ItemEatheight;
@@ -486,30 +489,29 @@ public class Player : MonoBehaviour
 
             if (CurrenrtScore <= TempScore)
             {
-                PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); // 베스트 스코어만 저장되도록 변경해야할듯
+                PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts);
             }
         }
         else
         {
-            PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); // 베스트 스코어만 저장되도록 변경해야할듯
+            PlayerPrefs.SetString(CurrentSceneName, uiController.culTimeCounts); 
         }
-
-
-
-
 
         uiController.ShowResult();
     }
 
     IEnumerator startKnockback()
     {
-        float culSpeed = WalkSpeed; // 피버 전 스피드
+        float culSpeed = --WalkSpeed; // 피버 전 스피드
         // 넉백
         rb.AddForce(Vector3.left * knockbackForce, ForceMode.Impulse);
-        WalkSpeed = 1f; // 잠시 느려짐
+        // 카메라 흔들림
+        GameManager.Instance.cinemachineShake.SetShakeParameters(0.5f, 2f, 1f);
+        WalkSpeed = 0f; // 잠시 느려짐
         yield return new WaitForSeconds(0.5f);
 
         WalkSpeed = culSpeed; // 원래 스피드로 돌아옴
+        WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
     }
 
     // 리스폰 시 걸리는 시간
@@ -649,7 +651,7 @@ public class Player : MonoBehaviour
         rb.useGravity  = true; // 중력 활성화
 
         Physics.gravity = new Vector3(0, -20f, 0); // 중력 변경
-      //  feverEffect.SetActive(false); // 이펙트 비활성화
+        //dashEffect.SetActive(false); // 이펙트 비활성화
     }
 
     // 미션 결과 ui 처리
