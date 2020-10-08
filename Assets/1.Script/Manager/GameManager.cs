@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public UiController uiController;
     public TutorialTrigger[] tutorialTrigger;
+    
 
     public bool isPauseTutorial; // 튜토리얼 일시정지 체크
     public bool isGameOver = false;

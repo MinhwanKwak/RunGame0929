@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
         DASH,
         INVINCIBILITY, // 무적
         DEAD, // 사망
-        CLEAR
+        CLEAR,
+        DOUBLEJUMP,
     }
 
     public GameObject Materialobj;
@@ -271,12 +272,14 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         animator.SetBool("Jump", true);
-
+       
         playerStatus = PlayerStatus.JUMP;
-        if(Jumpcount == 2)
+   
+        if (Jumpcount == 2)
         {
             if (playerStatus != PlayerStatus.DASH)
             {
+                AudioManager.Instance.PlaySoundSfx("Jump1");
                 rb.AddForce(Vector3.up * OneJumpSpeed, ForceMode.Impulse);
             }
         }
@@ -284,8 +287,13 @@ public class Player : MonoBehaviour
         {
             if (playerStatus != PlayerStatus.DASH && isDash == false)
             {
-                animator.SetBool("DoubleJump", true);
+                playerStatus = PlayerStatus.DOUBLEJUMP;
+                if (playerStatus == PlayerStatus.DOUBLEJUMP)
+                {
+                    animator.SetBool("DoubleJump", true);
+                }
                 rb.AddForce(Vector3.up * TwoJumpSpeed, ForceMode.Impulse);
+                AudioManager.Instance.PlaySoundSfx("Jump2");
             }
         }
         JumpEffect.gameObject.transform.position = gameObject.transform.position;
@@ -329,6 +337,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+
             if (playerStatus != PlayerStatus.DASH)
             {
                 // 최고 속도로 도달했을 때 맥스 스피드 애니를 출력함
@@ -356,6 +365,7 @@ public class Player : MonoBehaviour
         // 우편물
         if (other.CompareTag("Mail"))
         {
+            AudioManager.Instance.PlaySoundSfx("GetMail");
             print("우편물");
             // ui 카운트 증가(최대 소지개수 15)
             uiController.mailCount++;
@@ -382,8 +392,11 @@ public class Player : MonoBehaviour
             if (!isObstacleAnim)
             {
                 isObstacleAnim = true;
-                if(isObstacleAnim && playerStatus != PlayerStatus.JUMP) // 점프 때는 넉백애니 출력되지 않도록 함
+                if (isObstacleAnim && playerStatus != PlayerStatus.JUMP) // 점프 때는 넉백애니 출력되지 않도록 함
+                {
+                    AudioManager.Instance.PlaySoundSfx("Damage");
                     animator.SetTrigger("Damage");
+                }
             }
 
             if (!isObstacle)
@@ -414,7 +427,11 @@ public class Player : MonoBehaviour
         // 아이템
         if (other.CompareTag("Item"))
         {
+            animator.SetBool("DoubleJump", false);
             animator.SetTrigger("Drink");
+            AudioManager.Instance.PlaySoundSfx("Potion");
+            
+
             // 속도 증가
             StartCoroutine(feverTime());
             // 이펙트 활성화
@@ -551,9 +568,12 @@ public class Player : MonoBehaviour
 
                 print("미션성공");
                 missonCheck = true;
+                AudioManager.Instance.PlaySoundSfx("SuccessGuapge");
                 FindPostBox();
                 //10m내에 우체통을찾는 ray를 쏜다.
-               
+
+
+                isPostBoxcheck = true;
                 // 우편물 카운트 감소
                 uiController.mailCount--;
                 uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
@@ -585,7 +605,7 @@ public class Player : MonoBehaviour
 
     void FindPostBox()
     {
-        Collider[] t_cols = Physics.OverlapSphere(transform.position, 15f,PostBoxLayerMask);
+        Collider[] t_cols = Physics.OverlapSphere(transform.position, 5f,PostBoxLayerMask);
         
         for(int i = 0;  i  < t_cols.Length; ++i)
         {
@@ -595,15 +615,15 @@ public class Player : MonoBehaviour
 
               GameObject letter =  Instantiate(LetterObj);
 
-                letter.transform.position = LetterPosition.transform.position;
+                letter.transform.position = new Vector3(LetterPosition.transform.position.x, LetterPosition.transform.position.y + 1, LetterPosition.transform.position.z + 1);
+                
 
               giveLetter = letter.GetComponent<GiveLetter>();
 
                 giveLetter.GetPostBox(t_cols[i].gameObject);
             }
         }
-
-        isPostBoxcheck = true;
+        
     }
 
 

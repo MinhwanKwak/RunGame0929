@@ -166,6 +166,7 @@ public class UiController : MonoBehaviour
         ResultScreen.SetActive(true);
         if (curMission >= 60)
         {
+            AudioManager.Instance.PlaySoundSfx("Win");
            GameManager.Instance.player.animator.SetTrigger("success");
             print("sucsses");
             Clear.SetActive(true);
@@ -173,6 +174,8 @@ public class UiController : MonoBehaviour
         }
         else
         {
+
+            AudioManager.Instance.PlaySoundSfx("Lose");
             GameManager.Instance.player.animator.SetTrigger("fail");
             print("Fail");
             Fail.SetActive(true);
