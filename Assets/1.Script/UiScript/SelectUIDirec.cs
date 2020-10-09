@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SelectUIDirec : MonoBehaviour
 {
    public Image Option;
-
+    public Image Directors;
 
 
     public void OptionButtonClick()
@@ -20,8 +20,17 @@ public class SelectUIDirec : MonoBehaviour
     public void OptionButtonExit()
     {
         Option.gameObject.SetActive(false);
+        
+    }
 
 
-        Time.timeScale = 1f;
+    public void OptionButtonDirector()
+    {
+        Directors.gameObject.SetActive(true);
+    }
+
+    public void OptionButtonDirectorDown()
+    {
+        Directors.gameObject.SetActive(false);
     }
 }
