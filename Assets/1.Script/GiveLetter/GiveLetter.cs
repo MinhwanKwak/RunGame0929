@@ -7,12 +7,10 @@ public class GiveLetter : MonoBehaviour
 
    public GameObject PostObj;
 
-    private float dis;
-    private float speed;
-    private float waitTime;
-    private float delspeed = 2f;
-
-    private GameObject PostBox;
+   public float PostSpeed = 10f;
+   private float CurrentSpeed = 0f;
+   
+   private GameObject PostBox;
 
     void Start()
     {
@@ -30,40 +28,28 @@ public class GiveLetter : MonoBehaviour
     public void GetPostBox(GameObject GetBox)
     {
         PostBox = GetBox;
+        GameObject post = Instantiate(PostObj);
     }
 
 
 
     public void StartSendMail()
     {
-        if (PostBox == null) return;
-        dis = Vector3.Distance(transform.position, PostBox.transform.position);
-        
-
-        waitTime += Time.deltaTime;
-        //1.5초 동안 천천히 forward 방향으로 전진합니다
-        if (waitTime < 0.1f)
+        if(PostBox != null)
         {
-            speed = Time.deltaTime * delspeed;
-            transform.Translate(transform.forward * speed, Space.World);
-        }
-        else
-        {
-            // 1.5초 이후 타겟방향으로 lerp위치이동 합니다
+            if(CurrentSpeed <= PostSpeed)
+            {
+                CurrentSpeed += PostSpeed * Time.deltaTime; 
+            }
 
-            speed += Time.deltaTime;
-            float t = speed / dis;
+            transform.position += transform.up * CurrentSpeed * Time.deltaTime;
+            
 
-            transform.position = Vector3.LerpUnclamped(transform.position, PostBox.transform.position, t);
+
+            Vector3 t_dir = (PostBox.transform.position - transform.position).normalized;
+            transform.up = Vector3.Lerp(transform.up, t_dir, 0.25f);
 
         }
-
-
-        // 매프레임마다 타겟방향으로 포탄이 방향을바꿉니다
-        //타겟위치 - 포탄위치 = 포탄이 타겟한테서의 방향
-        Vector3 directionVec = PostBox.transform.position - transform.position;
-        Quaternion qua = Quaternion.LookRotation(directionVec);
-        transform.rotation = Quaternion.Slerp(transform.rotation, qua, Time.deltaTime * 2f);
     }
 
 
@@ -72,6 +58,7 @@ public class GiveLetter : MonoBehaviour
         if(other.gameObject.tag == "PostBox")
         {
             Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 
