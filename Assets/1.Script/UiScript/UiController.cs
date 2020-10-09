@@ -31,6 +31,8 @@ public class UiController : MonoBehaviour
     private Sprite[] missionSpeechBubbleSprite = new Sprite[3];
     [SerializeField, Header("말풍선오브젝트")]
     private Image missionSpeechBubbleObj;
+    [SerializeField]
+    private GameObject Fade_Out;
     // 말풍선 enum
     private enum God_kind
     {
@@ -77,6 +79,8 @@ public class UiController : MonoBehaviour
         GameObject[] mission = GameObject.FindGameObjectsWithTag("Misson");
         culMissionMax = mission.Length;
         GameManager.Instance.uiController = this;
+        if (Fade_Out != null)
+            Fade_Out.SetActive(true);
     }
 
     private void Update()

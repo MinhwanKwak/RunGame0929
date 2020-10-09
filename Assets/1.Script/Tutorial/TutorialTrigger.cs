@@ -58,7 +58,7 @@ public class TutorialTrigger : MonoBehaviour
             Time.timeScale = 0;
             if (isAnyKey)
             {
-                if (Input.anyKeyDown)
+                if (Input.GetKeyDown(KeyCode.LeftShift)|| Input.GetKeyDown(KeyCode.RightShift))
                 {
                     if (GameManager.Instance.uiController.isPause) return; // 일시정지가 켜져있으면 애니키를 동작할 수 없게함
                     Time.timeScale = 1;
