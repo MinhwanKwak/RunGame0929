@@ -19458,6 +19458,16 @@ PrefabInstance:
       propertyPath: cinemachineShake
       value: 
       objectReference: {fileID: 218385599}
+    - target: {fileID: 6110036129463747990, guid: b184a8b0e9d4cd4468599bad5f187cde,
+        type: 3}
+      propertyPath: levelToUnlock
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110036129463747990, guid: b184a8b0e9d4cd4468599bad5f187cde,
+        type: 3}
+      propertyPath: isPauseTutorial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6110036129463747991, guid: b184a8b0e9d4cd4468599bad5f187cde,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35111,7 +35121,7 @@ MonoBehaviour:
   SkyBoxNight: {fileID: 2100000, guid: 4d176d721cfef7140b150b22a936314e, type: 2}
   SkyBoxMorning: {fileID: 2100000, guid: 8c16fc7da0e5ced49956d40f80679ce2, type: 2}
   duration: 1
-  nightmorningtime: 2.03
+  nightmorningtime: 1.1
   Moon: {fileID: 1593539553}
   Sun: {fileID: 2046708141}
 --- !u!1 &782888716

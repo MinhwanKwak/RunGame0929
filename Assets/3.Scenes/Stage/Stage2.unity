@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: fefbd9af5cb60a54ea0fa82b752af1fb,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -23645,7 +23645,7 @@ MonoBehaviour:
   SkyBoxNight: {fileID: 2100000, guid: 4d176d721cfef7140b150b22a936314e, type: 2}
   SkyBoxMorning: {fileID: 2100000, guid: 8c16fc7da0e5ced49956d40f80679ce2, type: 2}
   duration: 1
-  nightmorningtime: 3
+  nightmorningtime: 1.6
   Moon: {fileID: 33956008}
   Sun: {fileID: 2138727683}
 --- !u!1 &546368688
