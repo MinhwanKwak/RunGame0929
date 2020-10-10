@@ -21,6 +21,8 @@ public class UiController : MonoBehaviour
     private Image missionBar;
     [SerializeField, Header("미션 아이콘")]
     private Transform missionIcon;
+    [Header("미션 결과")]
+    public Text missionResultTx;
     public float missionCount { get; set; } = 0; // 미션 성공 수
     private float curMission; // 현재 스테이지 미션 달성률
     private float prexx = -199; // 미션 아이콘 제어용

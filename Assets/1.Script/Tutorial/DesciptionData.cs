@@ -17,7 +17,7 @@ public class DesciptionData : MonoBehaviour
     {
         desData.Add(1, new string[]
         { "저 <color=green>우편물</color>에는\n빠르게 달리게 하는 힘이 있어","한 번 획득해보자!"});
-        desData.Add(2, new string[] { "<b>저기 높낮이가 \n다른 지형이 있네</b>",
+        desData.Add(2, new string[] { "<b>저기 높낮이가 \n다른 지형이 있어</b>",
             "<color=green>점프</color>를 해서 올라가보자", "점프는 <color=green>Space</color>키로 \n할 수 있어!"});
         desData.Add(3, new string[] { "잘했어!\n자 이제 <color=green>이단 점프</color>를 배워볼꺼야",
             "점프 중에  <color=green>한 번 더 \nSpace</color>키를 입력해봐!"});
