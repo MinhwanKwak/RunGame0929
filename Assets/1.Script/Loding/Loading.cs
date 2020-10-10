@@ -8,8 +8,8 @@ public class Loading : MonoBehaviour
     [SerializeField, Header("로딩바")]
     private Image LoadingBar;
     [SerializeField, Header("아이콘")]
-    private Transform Icon;
-    private float prexx = -785; // 아이콘 제어용
+    private RectTransform Icon;
+    private float prexx = -804; // 아이콘 제어용
 
     private void Start()
     {
@@ -37,14 +37,14 @@ public class Loading : MonoBehaviour
             LoadingBar.fillAmount = Mathf.MoveTowards(LoadingBar.fillAmount, 0.8f, Time.deltaTime*0.5f);
 
             // 아이콘 처리
-            float rexx = Mathf.Lerp(-785, 785, LoadingBar.fillAmount);
-            prexx = Mathf.Lerp(prexx, rexx, Time.deltaTime * 16f);
-            Icon.localPosition = new Vector3(prexx, -354, 0);
+            float rexx = Mathf.Lerp(-804, 834, LoadingBar.fillAmount);
+            prexx = Mathf.Lerp(prexx, rexx, Time.deltaTime * 20f);
+            Icon.anchoredPosition = new Vector3(prexx, Icon.anchoredPosition.y, 0);
 
             if (progress >= 0.8f &&LoadingBar.fillAmount >= 0.8f)
             {
                 LoadingBar.fillAmount = Mathf.MoveTowards(LoadingBar.fillAmount, 1f, progress);
-                Icon.localPosition = new Vector3(785, -354, 0);
+                Icon.anchoredPosition = new Vector3(834, Icon.anchoredPosition.y, 0);
             }
 
             if (progress >=1 && LoadingBar.fillAmount >= 1f)
