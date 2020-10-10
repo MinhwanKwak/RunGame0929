@@ -17322,6 +17322,11 @@ PrefabInstance:
       propertyPath: cinemachineShake
       value: 
       objectReference: {fileID: 218385599}
+    - target: {fileID: 6110036129463747990, guid: b184a8b0e9d4cd4468599bad5f187cde,
+        type: 3}
+      propertyPath: levelToUnlock
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6110036129463747991, guid: b184a8b0e9d4cd4468599bad5f187cde,
         type: 3}
       propertyPath: m_LocalPosition.x

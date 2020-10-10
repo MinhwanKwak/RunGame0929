@@ -73,6 +73,7 @@ public class LevelDirector : MonoBehaviour
                 }
 
 
+
                 int StageNumber = i + 1;
                 string GetTimeKeyCode = "Stage" + StageNumber;
                 string temp = PlayerPrefs.GetString(GetTimeKeyCode);
