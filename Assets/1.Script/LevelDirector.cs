@@ -79,9 +79,6 @@ public class LevelDirector : MonoBehaviour
 
 
 
-                //임시 초기화 코드 
-                PlayerPrefs.DeleteAll();
-
                 ClearTexts[i].text = temp;
                 
             }
