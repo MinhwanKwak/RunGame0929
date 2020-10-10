@@ -60,10 +60,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     private UiController uiController;
 
-    private bool missonCheck = false;
-    [SerializeField, Tooltip("상호작용 UI의 이동에 관련된 트랜스폼")]
-    private RectTransform missonResultPos;
-
     [SerializeField, Header("데미지 나눌 퍼센트(장애물)")]
     private float damagePercnt1 = 0.3f;
 
@@ -196,8 +192,6 @@ public class Player : MonoBehaviour
             }
         }
 
-      //  updateMissonResultPos(); // 테스트용
-
         if(playerStatus != PlayerStatus.DASH)
         {
             if (Input.GetKeyDown(KeyCode.Space) && !isjump && Jumpcount != 0)
@@ -245,10 +239,6 @@ public class Player : MonoBehaviour
 
                 Jump();
             }
-
-
-        // 죽으면 동작하지 않음
-        //if (playerStatus == PlayerStatus.DEAD) return;
 
         if (playerStatus != PlayerStatus.CLEAR && playerStatus != PlayerStatus.DEAD)
         {
@@ -304,11 +294,6 @@ public class Player : MonoBehaviour
         // 도착지점
         if (collision.gameObject.CompareTag("End"))
         {
-            //print("끝(콜라이더)");
-            //playerStatus = PlayerStatus.CLEAR;
-            //animator.StopPlayback();
-            //if (!rb.useGravity) // 중력 무시 상태일 때
-            //    rb.useGravity = true;
             if (collision.gameObject.tag == "Ground")
             {
                 JumpEffect.SetActive(false);
@@ -561,7 +546,6 @@ public class Player : MonoBehaviour
                     animator.SetTrigger("SendMail");
 
                 print("미션성공");
-                missonCheck = true;
                 FindPostBox();
                 //10m내에 우체통을찾는 ray를 쏜다.
                
@@ -573,11 +557,6 @@ public class Player : MonoBehaviour
                     WalkSpeed--;
                     GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
                 }
-
-                ////미션 결과 활성화
-                //uiController.missionResultTx.text = "성공";
-                //uiController.missionResultTx.color = new Color32(0, 0, 255, 180);
-                //StartCoroutine(MissonResultAtive());
 
                 if(SceneManager.GetActiveScene().name != "Stage1")
                 {
@@ -617,28 +596,6 @@ public class Player : MonoBehaviour
         isPostBoxcheck = true;
     }
 
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Misson"))
-        {
-            if (missonCheck) return;
-            //미션 결과 활성화
-            uiController.missionResultTx.text = "실패";
-            uiController.missionResultTx.color = new Color32(255, 0, 0, 180);
-            StartCoroutine(MissonResultAtive());
-        }
-    }
-
-    // 미션 결과 활성화
-    IEnumerator MissonResultAtive()
-    {
-        missonResultPos.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
-        missonResultPos.gameObject.SetActive(false);
-        missonCheck = false;
-    }
-
     // 피버타임 활성화
     IEnumerator feverTime()
     {
@@ -663,18 +620,6 @@ public class Player : MonoBehaviour
 
         Physics.gravity = new Vector3(0, -20f, 0); // 중력 변경
         //dashEffect.SetActive(false); // 이펙트 비활성화
-    }
-
-    // 미션 결과 ui 처리
-    private void updateMissonResultPos()
-    {
-        //체력 UI가 할당되어 있지 않다면, 아래 코드 구문 실행 X
-        if (missonResultPos == null) return;
-
-        var UIPos = transform.position;
-        UIPos = new Vector3(UIPos.x + 0.2f, UIPos.y += 1.2f, UIPos.z);
-
-        missonResultPos.position = UIPos;
     }
 
     //피격당했을시에 무적시간  
