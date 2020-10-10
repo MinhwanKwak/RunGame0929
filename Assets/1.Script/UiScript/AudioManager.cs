@@ -4,50 +4,127 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class Sound
+{
+    public string soundName;
+    public AudioClip clip;
+}
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioMixer masterMixer;
-    public Slider audioSlider;
+    //bgmmixer 
+    public AudioMixer MasterMixer;
+    [SerializeField] Sound[] sfxsounds;
+    
 
-    private float BeforeAudioSliderValue = 0;
+    [Header("효과음 플레이어")]
+    public AudioSource[] sfxPlayer;
+    public Slider BgmSlider;
+    public Slider SfxSlider;
+    
+
+    public static AudioManager Instance;
+
+    private float BGMBeforeAudioSliderValue =  0f;
+    private float SFXBeforeAudioSliderValue =  0f;
+
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+
+            DontDestroyOnLoad(Instance);
+        }
+    }
 
     private void Start()
     {
-        BeforeAudioSliderValue = audioSlider.value;
-        audioSlider.value = PlayerPrefs.GetFloat("BackGroundSound");
+        MasterMixer.SetFloat("BGM", PlayerPrefs.GetFloat("BGMGroundSound"));
+        if(BgmSlider != null)
+        BgmSlider.value = PlayerPrefs.GetFloat("BGMGroundSound");
+
+        MasterMixer.SetFloat("SFX", PlayerPrefs.GetFloat("SFXGroundSound"));
+
+        if (SfxSlider != null)
+            SfxSlider.value = PlayerPrefs.GetFloat("SFXGroundSound");
+
+
+    }
+
+    public void PlaySoundSfx(string _soundName)
+    {
+        for(int i = 0;  i < sfxsounds.Length; i++)
+        {
+            if(_soundName == sfxsounds[i].soundName)
+            {
+                for(int j = 0; j < sfxPlayer.Length; ++j)
+                {
+                    if(!sfxPlayer[j].isPlaying)
+                    {
+                        sfxPlayer[j].clip = sfxsounds[i].clip;
+                        sfxPlayer[j].Play();
+                        return;
+                    }
+                }
+            }
+        }
+        Debug.Log("모든 효과음이 재생중 입니다.");
+        return;
     }
 
     private void Update()
     {
-        if (BeforeAudioSliderValue != audioSlider.value)
+        if (BGMBeforeAudioSliderValue != BgmSlider.value)
         {
-            BeforeAudioSliderValue = audioSlider.value;
-            AudioController();
+            BGMBeforeAudioSliderValue = BgmSlider.value;
+            BGMAudioController();
+        }
+
+        if(SFXBeforeAudioSliderValue != SfxSlider.value)
+        {
+            SFXBeforeAudioSliderValue = SfxSlider.value;
+            SFXAudioController();
         }
     }
 
-    public void AudioController()
+    public void BGMAudioController()
     {
 
-        PlayerPrefs.SetFloat("BackGroundSound", audioSlider.value);
+        PlayerPrefs.SetFloat("BGMGroundSound", BgmSlider.value);
 
-        float sound = PlayerPrefs.GetFloat("BackGroundSound");
+        float sound = PlayerPrefs.GetFloat("BGMGroundSound");
 
         if (sound == -40f)
         {
-            masterMixer.SetFloat("BGM", -80);
+            MasterMixer.SetFloat("BGM", -80);
 
         }
         else
         {
-            masterMixer.SetFloat("BGM", sound);
+            MasterMixer.SetFloat("BGM", sound);
         }
 
     }
 
-    public void ToggleAudioVolume()
+    public void SFXAudioController()
     {
-        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
+
+        PlayerPrefs.SetFloat("SFXGroundSound", SfxSlider.value);
+
+        float sound = PlayerPrefs.GetFloat("SFXGroundSound");
+
+        if (sound == -40f)
+        {
+            MasterMixer.SetFloat("SFX", -80);
+
+        }
+        else
+        {
+            MasterMixer.SetFloat("SFX", sound);
+        }
+
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7701631704345395818}
   - component: {fileID: 6569868094714549926}
   - component: {fileID: 4387606426190738763}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_002
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2559818914574310011}
   - component: {fileID: 7421080559915267243}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: temple_ani
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 6129655718916645455}
   - component: {fileID: 8788087038904043400}
   - component: {fileID: 8993045725281047770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_013
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 3521647815356761113}
   - component: {fileID: 5621300596611658995}
   - component: {fileID: 459970053162442860}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_014
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 2652193001497157624}
   - component: {fileID: 1690293598432953843}
   - component: {fileID: 9149933542054675844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_001
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 4212059380943597219}
   - component: {fileID: 5139765363209318852}
   - component: {fileID: 3415374472688104822}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_011
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 5254346722577295009}
   - component: {fileID: 7296437544182029845}
   - component: {fileID: 6882226730633636953}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_007
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 5226566710307405570}
   - component: {fileID: 4242257226938157482}
   - component: {fileID: 4839930992120506161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Object001
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 8674964787698188761}
   - component: {fileID: 1127496047716090554}
   - component: {fileID: 3818013373280895821}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_009
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 3855297611416225268}
   - component: {fileID: 7677508249919080005}
   - component: {fileID: 1979314899268893145}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_015
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   - component: {fileID: 2381006663955472121}
   - component: {fileID: 7751333662759336640}
   - component: {fileID: 2426782500794516331}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_006
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 1504642622962025934}
   - component: {fileID: 7247138403497925309}
   - component: {fileID: 3677418084883436690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_005
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 1601362926016049024}
   - component: {fileID: 7304426862633730391}
   - component: {fileID: 8668651136493184424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_004
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1180,7 +1180,7 @@ GameObject:
   - component: {fileID: 4890735347247263027}
   - component: {fileID: 6733936319966619333}
   - component: {fileID: 5133021752354284057}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_012
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 2598136413953836433}
   - component: {fileID: 1562275822119813355}
   - component: {fileID: 468733242165979666}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_010
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1366,7 +1366,7 @@ GameObject:
   - component: {fileID: 6787257494872711225}
   - component: {fileID: 4440451262520329231}
   - component: {fileID: 7587517753826417274}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_003
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 6972297901286809889}
   - component: {fileID: 7867921391509872891}
   - component: {fileID: 4265595324620348110}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box001_frag_008
   m_TagString: obstacle
   m_Icon: {fileID: 0}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 public class SceenDirector : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,10 +18,10 @@ public class SceenDirector : MonoBehaviour
     }
 
 
-    public void GameStart()
-    {
-        SceneManager.LoadScene("SelectScene");
-    }
+    //public void GameStart()
+    //{
+    //    SceneManager.LoadScene("SelectScene");
+    //}
 
     public void StartNewScene()
     {
@@ -31,4 +32,14 @@ public class SceenDirector : MonoBehaviour
     {
         SceneManager.LoadScene("LoadScene");
     }
+
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+        
 }

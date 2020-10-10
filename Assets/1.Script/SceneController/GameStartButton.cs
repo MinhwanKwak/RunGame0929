@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameStartButton : MonoBehaviour
 {
-    public GameObject startbutton;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +16,7 @@ public class GameStartButton : MonoBehaviour
 
         yield return new WaitForSeconds(7f);
 
-
-        startbutton.SetActive(true);
-
+        
 
     }
 }

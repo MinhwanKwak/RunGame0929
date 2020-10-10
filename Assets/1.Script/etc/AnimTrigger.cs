@@ -15,6 +15,15 @@ public class AnimTrigger : MonoBehaviour
         {
             print("트리거");
             act.GetComponent<Animator>().enabled = true;
+            if (act.gameObject.layer == 10)
+            {
+                AudioManager.Instance.PlaySoundSfx("BrokenRock");
+            }
+            else if (act.gameObject.layer == 11)
+            {
+
+                AudioManager.Instance.PlaySoundSfx("BrokenHumanRock");
+            }
         }
     }
 }

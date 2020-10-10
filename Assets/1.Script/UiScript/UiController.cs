@@ -69,8 +69,8 @@ public class UiController : MonoBehaviour
 
     // 결과창 미션 확인
     private bool isResultMission = false;
-    
 
+    public GameObject optionpanel;
     private void Awake()
     {
         // 게임이 시작될 때 우편물 시스템 존이 몇개 있는 지 파악
@@ -168,13 +168,15 @@ public class UiController : MonoBehaviour
         ResultScreen.SetActive(true);
         if (curMission >= 60)
         {
-           GameManager.Instance.player.animator.SetTrigger("success");
+            AudioManager.Instance.PlaySoundSfx("Win");
+            GameManager.Instance.player.animator.SetTrigger("success");
             print("sucsses");
             Clear.SetActive(true);
             isResultMission = true;
         }
         else
         {
+            AudioManager.Instance.PlaySoundSfx("Lose");
             GameManager.Instance.player.animator.SetTrigger("fail");
             print("Fail");
             Fail.SetActive(true);
@@ -209,6 +211,7 @@ public class UiController : MonoBehaviour
         }
     }
 
+   
     #region Button 삽입용
     // continue
     public void GameReturn()
@@ -242,6 +245,16 @@ public class UiController : MonoBehaviour
             isPause = false;
         }
         LoadingManager.instance.beforeSceneSetup("LoadScene");
-    } 
+    }
+
+    public void OptionExit()
+    {
+        optionpanel.SetActive(false);
+    }
+
+    public void OptionOn()
+    {
+        optionpanel.SetActive(true);
+    }
     #endregion
 }

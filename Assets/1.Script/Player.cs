@@ -223,6 +223,10 @@ public class Player : MonoBehaviour
             animator.speed = 0;
 
         dashEffect.transform.position = new Vector3(dashEffect.transform.position.x, transform.position.y+0.2f, dashEffect.transform.position.z);
+        if (WalkSpeed >= maxSpeed)
+            dashEffect.SetActive(true);
+        else
+            dashEffect.SetActive(false);
     }
 
     // 물리 이동,점프 처리
@@ -267,6 +271,7 @@ public class Player : MonoBehaviour
         {
             if (playerStatus != PlayerStatus.DASH)
             {
+                AudioManager.Instance.PlaySoundSfx("Jump1");
                 rb.AddForce(Vector3.up * OneJumpSpeed, ForceMode.Impulse);
             }
         }
@@ -275,6 +280,7 @@ public class Player : MonoBehaviour
             if (playerStatus != PlayerStatus.DASH && isDash == false)
             {
                 animator.SetBool("DoubleJump", true);
+                AudioManager.Instance.PlaySoundSfx("Jump2");
                 rb.AddForce(Vector3.up * TwoJumpSpeed, ForceMode.Impulse);
             }
         }
@@ -321,12 +327,12 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("Walk", false);
                     animator.SetBool("MaxSpeed", true);
-                    dashEffect.SetActive(true);
+                  // dashEffect.SetActive(true);
                 }
                 else
                 {
                     animator.SetBool("MaxSpeed", false);
-                    dashEffect.SetActive(false);
+                   // dashEffect.SetActive(false);
                 }
             }
         }
@@ -341,6 +347,8 @@ public class Player : MonoBehaviour
         // 우편물
         if (other.CompareTag("Mail"))
         {
+
+            AudioManager.Instance.PlaySoundSfx("GetMail");
             print("우편물");
             // ui 카운트 증가(최대 소지개수 15)
             uiController.mailCount++;
@@ -368,7 +376,8 @@ public class Player : MonoBehaviour
             {
                 isObstacleAnim = true;
                 if(isObstacleAnim && playerStatus != PlayerStatus.JUMP) // 점프 때는 넉백애니 출력되지 않도록 함
-                    animator.SetTrigger("Damage");
+                AudioManager.Instance.PlaySoundSfx("Damage");
+                animator.SetTrigger("Damage");
             }
 
             if (!isObstacle)
@@ -399,6 +408,8 @@ public class Player : MonoBehaviour
         // 아이템
         if (other.CompareTag("Item"))
         {
+
+            AudioManager.Instance.PlaySoundSfx("Potion");
             animator.SetTrigger("Drink");
             // 속도 증가
             StartCoroutine(feverTime());
@@ -407,9 +418,16 @@ public class Player : MonoBehaviour
             //플레이어 현재 위치
             ItemEatPos = transform.position;
             ItemEatPos.y += ItemEatheight;
-            // 아이템 삭제
-            Destroy(other.gameObject);
+            // 아이템 비활성화
+            other.gameObject.SetActive(false);
+            StartCoroutine(ActiveItem()); // 2초 뒤 활성화
             GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(fever+0.01f, 10); // 카메라 줌아웃 
+
+            IEnumerator ActiveItem()
+            {
+                yield return new WaitForSeconds(2f);
+                other.gameObject.SetActive(true);
+            }
         }
 
         // 리스폰 저장
@@ -537,7 +555,11 @@ public class Player : MonoBehaviour
                 print("미션성공");
                 FindPostBox();
                 //10m내에 우체통을찾는 ray를 쏜다.
-               
+
+
+                isPostBoxcheck = true;
+                AudioManager.Instance.PlaySoundSfx("SuccessGuapge");
+
                 // 우편물 카운트 감소
                 uiController.mailCount--;
                 uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
@@ -564,7 +586,7 @@ public class Player : MonoBehaviour
 
     void FindPostBox()
     {
-        Collider[] t_cols = Physics.OverlapSphere(transform.position, 15f,PostBoxLayerMask);
+        Collider[] t_cols = Physics.OverlapSphere(transform.position, 5f,PostBoxLayerMask);
         
         for(int i = 0;  i  < t_cols.Length; ++i)
         {
@@ -581,8 +603,7 @@ public class Player : MonoBehaviour
                 giveLetter.GetPostBox(t_cols[i].gameObject);
             }
         }
-
-        isPostBoxcheck = true;
+        
     }
 
     // 피버타임 활성화
