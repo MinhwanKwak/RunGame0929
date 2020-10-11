@@ -236,7 +236,7 @@ public class UiController : MonoBehaviour
 
         AudioManager.Instance.PlaySoundSfx("ButtonClick");
         //GameManager.Instance.isGameOver = true; // 게임오버 처리
-        if (isPause)
+        if (isPause || Time.timeScale == 0)
         {
             Time.timeScale = 1;
             isPause = false;
