@@ -194,15 +194,9 @@ public class Player : MonoBehaviour
 
         if(playerStatus != PlayerStatus.DASH)
         {
-
-            if (uiController.tutorial == null) return;
-            
-            if (!uiController.tutorial.activeSelf)
+            if (Input.GetKeyDown(KeyCode.Space) && !isjump && Jumpcount != 0)
             {
-                if (Input.GetKeyDown(KeyCode.Space) && !isjump && Jumpcount != 0)
-                {
-                    isjump = true;
-                }
+                isjump = true;
             }
         }
 
@@ -398,7 +392,7 @@ public class Player : MonoBehaviour
                 uiController.mailCount -= 1f;
             else
                 uiController.mailCount -= Damage;
-            if ((uiController.mailCount >= 5 && uiController.mailCount <= 10) && WalkSpeed != minSpeed)
+            if ((uiController.mailCount >= 5 && uiController.mailCount < 10) && WalkSpeed != minSpeed)
             {
                 WalkSpeed--;
                 GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
@@ -456,7 +450,7 @@ public class Player : MonoBehaviour
             else
                 uiController.mailCount -= Damage;
 
-            if ((uiController.mailCount >= 5 && uiController.mailCount <= 10) && WalkSpeed != minSpeed)
+            if ((uiController.mailCount >= 5 && uiController.mailCount < 10) && WalkSpeed != minSpeed)
             {
                 WalkSpeed--;
                 GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
@@ -578,7 +572,7 @@ public class Player : MonoBehaviour
                 // 우편물 카운트 감소
                 uiController.mailCount--;
                 uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
-                if ((uiController.mailCount >= 5 && uiController.mailCount <= 10) && WalkSpeed != minSpeed)
+                if ((uiController.mailCount >= 5 && uiController.mailCount < 10) && WalkSpeed != minSpeed)
                 {
                     WalkSpeed--;
                     GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
