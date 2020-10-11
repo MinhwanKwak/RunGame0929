@@ -1581,7 +1581,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 31.42236
+    FieldOfView: 32.47821
     OrthographicSize: 38.53339
     NearClipPlane: 0.1
     FarClipPlane: 5000
