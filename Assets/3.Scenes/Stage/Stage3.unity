@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: fefbd9af5cb60a54ea0fa82b752af1fb,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -72018,6 +72018,11 @@ PrefabInstance:
       propertyPath: SceneName
       value: Stage3
       objectReference: {fileID: 0}
+    - target: {fileID: 4012869861132700751, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
+        type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 1758236861}
     - target: {fileID: 4012869861288462226, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72162,6 +72167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e227de20206acc04b9ee37d209769982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1758236861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4012869862351288095, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1758236859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1758250707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5410683363082890091, guid: 73ae4b52d8cb490499ec1d680edbc655,

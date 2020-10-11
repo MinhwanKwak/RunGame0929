@@ -72,6 +72,8 @@ public class UiController : MonoBehaviour
 
     public GameObject optionpanel;
     public GameObject SelectNegativePanel;
+
+    public GameObject tutorial;
     private void Awake()
     {
         // 게임이 시작될 때 우편물 시스템 존이 몇개 있는 지 파악

@@ -194,9 +194,15 @@ public class Player : MonoBehaviour
 
         if(playerStatus != PlayerStatus.DASH)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !isjump && Jumpcount != 0)
+
+            if (uiController.tutorial == null) return;
+            
+            if (!uiController.tutorial.activeSelf)
             {
-                isjump = true;
+                if (Input.GetKeyDown(KeyCode.Space) && !isjump && Jumpcount != 0)
+                {
+                    isjump = true;
+                }
             }
         }
 
