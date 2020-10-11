@@ -10319,7 +10319,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1503558423}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
