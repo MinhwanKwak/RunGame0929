@@ -385,15 +385,20 @@ public class Player : MonoBehaviour
                 return;
             }
 
-            StartCoroutine(startKnockback());
 
             // ui 카운트 감소
             float Damage = Mathf.Ceil((uiController.mailCount * damagePercnt1)); // 퍼센트로 나눈 값의 소수점 올림 처리하여 감소
-            GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌아웃 
             if (uiController.mailCount == 0)
                 uiController.mailCount -= 1f;
             else
                 uiController.mailCount -= Damage;
+            if ((uiController.mailCount >= 5 && uiController.mailCount <= 10) && WalkSpeed != minSpeed)
+            {
+                WalkSpeed--;
+                GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
+                WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
+            }
+            StartCoroutine(startKnockback());
             // 죽음 판정
             checkedDead();
             uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
@@ -440,13 +445,17 @@ public class Player : MonoBehaviour
         {
             // 데미지 처리
             float Damage = Mathf.Ceil((uiController.mailCount * damagePercnt2)); // 퍼센트로 나눈 값의 소수점 올림 처리하여 감소(50%)
-            WalkSpeed--;
-            WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
-            GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
             if (uiController.mailCount == 0)
                 uiController.mailCount -= 1f;
             else
                 uiController.mailCount -= Damage;
+
+            if ((uiController.mailCount >= 5 && uiController.mailCount <= 10) && WalkSpeed != minSpeed)
+            {
+                WalkSpeed--;
+                GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
+                WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
+            }
             checkedDead();
             Invoke("respawnTime", 0.3f);
             // 죽음 판정
@@ -505,7 +514,7 @@ public class Player : MonoBehaviour
 
     IEnumerator startKnockback()
     {
-        float culSpeed = --WalkSpeed; // 피버 전 스피드
+        float culSpeed = WalkSpeed; // 피버 전 스피드
         // 넉백
         rb.AddForce(Vector3.left * knockbackForce, ForceMode.Impulse);
         // 카메라 흔들림
@@ -563,10 +572,11 @@ public class Player : MonoBehaviour
                 // 우편물 카운트 감소
                 uiController.mailCount--;
                 uiController.mailCount = Mathf.Clamp(uiController.mailCount, 0, 15);
-                if (uiController.mailCount >= 5 && WalkSpeed != 1)
+                if ((uiController.mailCount >= 5 && uiController.mailCount <= 10) && WalkSpeed != minSpeed)
                 {
                     WalkSpeed--;
                     GameManager.Instance.cinemachineShake.SetFieldOfViewSizeParameters(2, -1); // 카메라 줌인
+                    WalkSpeed = Mathf.Clamp(WalkSpeed, minSpeed, maxSpeed);
                 }
 
                 if(SceneManager.GetActiveScene().name != "Stage1")
