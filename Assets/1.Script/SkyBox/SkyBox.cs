@@ -35,7 +35,6 @@ public class SkyBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         RenderSettings.skybox = SkyBoxNight;
         RenderSettings.skybox.SetColor("_Tint", new Color(1, 1, 1));
         RenderSettings.skybox = SkyBoxMorning;
@@ -43,6 +42,8 @@ public class SkyBox : MonoBehaviour
         RenderSettings.skybox = SkyBoxNight;
 
 
+
+        if (Moon == null) return;
         moonpos = Moon.transform.position;
         Sunpos = Sun.transform.position;
     }
@@ -52,6 +53,10 @@ public class SkyBox : MonoBehaviour
     {
         //float lerp = Mathf.PingPong(Time.time, duration) / duration;
         //RenderSettings.skybox.SetColor("_Tint", Color.Lerp(colorStart, colorEnd, lerp));
+
+        if (Moon == null) return;
+
+
         SunAndMoonMoove();
 
 
