@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: fefbd9af5cb60a54ea0fa82b752af1fb,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -50102,6 +50102,11 @@ PrefabInstance:
       propertyPath: Fade_Out
       value: 
       objectReference: {fileID: 1040419731}
+    - target: {fileID: 4012869861132700751, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
+        type: 3}
+      propertyPath: SceneName
+      value: Stage1
+      objectReference: {fileID: 0}
     - target: {fileID: 4012869861199100106, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
         type: 3}
       propertyPath: m_IsActive
