@@ -50102,6 +50102,11 @@ PrefabInstance:
       propertyPath: Fade_Out
       value: 
       objectReference: {fileID: 1040419731}
+    - target: {fileID: 4012869861132700751, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
+        type: 3}
+      propertyPath: SceneName
+      value: Stage1
+      objectReference: {fileID: 0}
     - target: {fileID: 4012869861199100106, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
         type: 3}
       propertyPath: m_IsActive
