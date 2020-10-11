@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8819712748897696512}
   - component: {fileID: 1110850700327624171}
   - component: {fileID: 2627708682851318855}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_016
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8819712748897696512
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3687160406055364992}
   - component: {fileID: 3190557289286029511}
   - component: {fileID: 2627708682534323492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_008
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3687160406055364992
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 916997100035927411}
   - component: {fileID: 7260121799879128199}
   - component: {fileID: 2627708681386694547}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_029
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &916997100035927411
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 561473873180965356}
   - component: {fileID: 8058140212427651560}
   - component: {fileID: 2627708681171367122}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_023
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &561473873180965356
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 598738722616170494}
   - component: {fileID: 6398484695581602726}
   - component: {fileID: 2627708682952478386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_020
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &598738722616170494
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -431,7 +431,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 8214979411214998412}
   - component: {fileID: 5368562783804795962}
   - component: {fileID: 2627708681134918717}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_012
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8214979411214998412
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 61656589295164321}
   - component: {fileID: 4827484639690409405}
   - component: {fileID: 2627708681409738536}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_009
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &61656589295164321
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 8283550280643121928}
   - component: {fileID: 8295398626045738969}
   - component: {fileID: 2627708681816726738}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_025
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -683,7 +683,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8283550280643121928
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -710,7 +710,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 4245065372884651921}
   - component: {fileID: 8823697982231109922}
   - component: {fileID: 2627708682536812019}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_007
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &4245065372884651921
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 3480254616090040029}
   - component: {fileID: 5175080302729320199}
   - component: {fileID: 2627708682293226241}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_027
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3480254616090040029
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 58989013433811583}
   - component: {fileID: 8100801978582660789}
   - component: {fileID: 2627708682792268152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_003
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -962,7 +962,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &58989013433811583
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -989,7 +989,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 353842020947262126}
   - component: {fileID: 3123954984353732763}
   - component: {fileID: 2627708682729300763}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_026
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1055,7 +1055,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &353842020947262126
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1082,7 +1082,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 1960205082337155988}
   - component: {fileID: 185012941109344261}
   - component: {fileID: 2627708682228114684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_015
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1148,7 +1148,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &1960205082337155988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1175,7 +1175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1221,7 +1221,7 @@ GameObject:
   - component: {fileID: 3214141338298061904}
   - component: {fileID: 1850310958463844396}
   - component: {fileID: 2627708681180145744}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_017
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1241,7 +1241,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3214141338298061904
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1268,7 +1268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 4840228337428146407}
   - component: {fileID: 7463535025113319066}
   - component: {fileID: 2627708680881522956}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_028
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1334,7 +1334,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &4840228337428146407
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1361,7 +1361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1407,7 +1407,7 @@ GameObject:
   - component: {fileID: 3002626059047805784}
   - component: {fileID: 6477297229859466057}
   - component: {fileID: 2627708681154048782}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_011
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1427,7 +1427,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3002626059047805784
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1454,7 +1454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1500,7 +1500,7 @@ GameObject:
   - component: {fileID: 8115504858914859936}
   - component: {fileID: 5211158910927517899}
   - component: {fileID: 2627708682301514471}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_021
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8115504858914859936
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1547,7 +1547,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 2042188320742330637}
   - component: {fileID: 4424733655417718584}
   - component: {fileID: 2627708682097213834}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_018
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1613,7 +1613,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &2042188320742330637
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1640,7 +1640,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1686,7 +1686,7 @@ GameObject:
   - component: {fileID: 3559332599005972507}
   - component: {fileID: 5719333415776470503}
   - component: {fileID: 2627708682302609968}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_014
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1706,7 +1706,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3559332599005972507
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1733,7 +1733,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1779,7 +1779,7 @@ GameObject:
   - component: {fileID: 7084347818787157956}
   - component: {fileID: 755553366295588096}
   - component: {fileID: 2627708681538950258}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_006
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1799,7 +1799,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &7084347818787157956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1826,7 +1826,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1870,7 +1870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6993469895723277128}
   - component: {fileID: 2627708681536524886}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_ani_1
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1928,7 +1928,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6293378100381067611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2591a982c3edd1a44b7eeca302d7920a, type: 2}
   m_CullingMode: 0
@@ -1951,7 +1951,7 @@ GameObject:
   - component: {fileID: 6499719641089730521}
   - component: {fileID: 5383130640053839930}
   - component: {fileID: 2627708682923340205}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_022
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1971,7 +1971,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6499719641089730521
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1998,7 +1998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2044,7 +2044,7 @@ GameObject:
   - component: {fileID: 6945267048813841297}
   - component: {fileID: 4091771462433973118}
   - component: {fileID: 2627708680993896259}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_019
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2064,7 +2064,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6945267048813841297
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2091,7 +2091,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 5211239930153885726}
   - component: {fileID: 252147930104965584}
   - component: {fileID: 2627708680924826515}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_010
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2157,7 +2157,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &5211239930153885726
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2184,7 +2184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2230,7 +2230,7 @@ GameObject:
   - component: {fileID: 4576441542038367436}
   - component: {fileID: 6143243454386468937}
   - component: {fileID: 2627708681088421260}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_013
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2250,7 +2250,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &4576441542038367436
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2277,7 +2277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2323,7 +2323,7 @@ GameObject:
   - component: {fileID: 6895044327033306488}
   - component: {fileID: 616210979674942718}
   - component: {fileID: 2627708682075217149}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_001
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2343,7 +2343,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6895044327033306488
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2370,7 +2370,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2416,7 +2416,7 @@ GameObject:
   - component: {fileID: 6400859438912952815}
   - component: {fileID: 1819262192574475592}
   - component: {fileID: 2627708681208750788}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_024
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2436,7 +2436,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6400859438912952815
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2463,7 +2463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2509,7 +2509,7 @@ GameObject:
   - component: {fileID: 3537503751953440466}
   - component: {fileID: 3871633646587895579}
   - component: {fileID: 2627708681818624108}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_005
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2529,7 +2529,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3537503751953440466
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2556,7 +2556,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2602,7 +2602,7 @@ GameObject:
   - component: {fileID: 6799733968850775269}
   - component: {fileID: 156808943977398650}
   - component: {fileID: 2627708682976324080}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_004
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2622,7 +2622,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6799733968850775269
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2649,7 +2649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2695,7 +2695,7 @@ GameObject:
   - component: {fileID: 2428997834505715717}
   - component: {fileID: 2499585404402052018}
   - component: {fileID: 2627708680923935703}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pillar_2_frag_002
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2715,7 +2715,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6993469895723277128}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &2428997834505715717
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2742,7 +2742,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63072dcd53450be4c840452928bc2819, type: 2}
+  - {fileID: 2100000, guid: 5ed08611f4925c442bf2e7a76a46f025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

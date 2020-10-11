@@ -25,11 +25,14 @@ public class SceenDirector : MonoBehaviour
 
     public void StartNewScene()
     {
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         LoadingManager.instance.beforeSceneSetup("Standing");
     }
 
     public void LoadScene()
     {
+        
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         SceneManager.LoadScene("LoadScene");
     }
 

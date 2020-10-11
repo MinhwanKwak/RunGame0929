@@ -71,6 +71,7 @@ public class UiController : MonoBehaviour
     private bool isResultMission = false;
 
     public GameObject optionpanel;
+    public GameObject SelectNegativePanel;
     private void Awake()
     {
         // 게임이 시작될 때 우편물 시스템 존이 몇개 있는 지 파악
@@ -216,6 +217,8 @@ public class UiController : MonoBehaviour
     // continue
     public void GameReturn()
     {
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
+
         // 일시정지 창 나가기
         if (isPause)
         {
@@ -228,6 +231,8 @@ public class UiController : MonoBehaviour
 
     public void ReStart()
     {
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         //GameManager.Instance.isGameOver = true; // 게임오버 처리
         if (isPause)
         {
@@ -239,6 +244,9 @@ public class UiController : MonoBehaviour
 
     public void Quit()
     {
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
+
         if (isPause)
         {
             Time.timeScale = 1;
@@ -249,11 +257,15 @@ public class UiController : MonoBehaviour
 
     public void OptionExit()
     {
+        SelectNegativePanel.SetActive(false);
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         optionpanel.SetActive(false);
     }
 
     public void OptionOn()
     {
+        SelectNegativePanel.SetActive(true);
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         optionpanel.SetActive(true);
     }
     #endregion

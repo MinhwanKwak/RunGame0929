@@ -13,6 +13,8 @@ public class SelectUIDirec : MonoBehaviour
 
     public void OptionButtonClick()
     {
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         Option.gameObject.SetActive(true);
         
     }
@@ -20,6 +22,8 @@ public class SelectUIDirec : MonoBehaviour
 
     public void OptionButtonExit()
     {
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         Option.gameObject.SetActive(false);
         
     }
@@ -27,11 +31,15 @@ public class SelectUIDirec : MonoBehaviour
 
     public void OptionButtonDirector()
     {
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         Directors.gameObject.SetActive(true);
     }
 
     public void OptionButtonDirectorDown()
     {
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         Directors.gameObject.SetActive(false);
     }
 }
