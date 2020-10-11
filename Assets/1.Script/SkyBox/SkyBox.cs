@@ -29,12 +29,19 @@ public class SkyBox : MonoBehaviour
     Vector3 moonpos;
     Vector3 Sunpos;
 
+    private bool isMoon = true;
     private bool isOneSelect = false;
     private float moonspeed = 10f;
     // Start is called before the first frame update
     void Start()
     {
-        CurrentNightColor = RenderSettings.skybox.GetColor("_Tint");
+
+        RenderSettings.skybox = SkyBoxNight;
+        RenderSettings.skybox.SetColor("_Tint", new Color(1, 1, 1));
+        RenderSettings.skybox = SkyBoxMorning;
+        RenderSettings.skybox.SetColor("_Tint", new Color(0.3f, 0.3f, 0.3f));
+        RenderSettings.skybox = SkyBoxNight;
+
 
         moonpos = Moon.transform.position;
         Sunpos = Sun.transform.position;
@@ -70,15 +77,15 @@ public class SkyBox : MonoBehaviour
 
         testbool = true;
 
-        RenderSettings.skybox.SetColor("_Tint", CurrentNightColor);
 
 
+       
 
         while (tintcolor.r < 1.0f && testbool)
         {
-            RenderSettings.skybox = SkyBoxMorning;
 
-            CurrentMorningColor = RenderSettings.skybox.GetColor("_Tint");
+            isMoon = false;
+            RenderSettings.skybox = SkyBoxMorning;
 
             tintcolor += new Color(0.1f, 0.1f, 0.1f, 1) * Time.deltaTime * nightmorningtime;
 
@@ -99,8 +106,6 @@ public class SkyBox : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        
-
     }
 
 

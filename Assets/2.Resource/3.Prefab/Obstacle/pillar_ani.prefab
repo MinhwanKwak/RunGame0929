@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3428747544220565904}
   - component: {fileID: 5155453817840845204}
   - component: {fileID: 876202076440321479}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_023
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6511890622440383472}
   - component: {fileID: 7124533337150886982}
   - component: {fileID: 876202075185888720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_012
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 2310557203008941954}
   - component: {fileID: 8112216396134714330}
   - component: {fileID: 876202075238927558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_020
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 2919623856347915229}
   - component: {fileID: 7683476904006483393}
   - component: {fileID: 876202075518723284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_009
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 2922282052000692739}
   - component: {fileID: 6355791011539373769}
   - component: {fileID: 876202075806744637}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_003
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 3221906944016335570}
   - component: {fileID: 217613946258497767}
   - component: {fileID: 876202075438114973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_026
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 343811507051047980}
   - component: {fileID: 3599003070976997456}
   - component: {fileID: 876202075907839344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_017
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 3705220156583093224}
   - component: {fileID: 3084638574641119353}
   - component: {fileID: 876202074788236111}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_015
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 6533191634913176436}
   - component: {fileID: 6575456819528304549}
   - component: {fileID: 876202076231507429}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_025
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 1348294060540327917}
   - component: {fileID: 5920976400720386398}
   - component: {fileID: 876202076652831733}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_007
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 1734944792462913185}
   - component: {fileID: 8038377946443083643}
   - component: {fileID: 876202074968844455}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_027
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 5925171674694042492}
   - component: {fileID: 2825185134856775063}
   - component: {fileID: 876202075617167966}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_016
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 1978477580211130876}
   - component: {fileID: 295188951892945083}
   - component: {fileID: 876202075872610374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_008
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1221,7 +1221,7 @@ GameObject:
   - component: {fileID: 1719622369147229360}
   - component: {fileID: 9015842951438090293}
   - component: {fileID: 876202075038770151}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_013
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 8642271836236399876}
   - component: {fileID: 2365131587808908418}
   - component: {fileID: 876202074639840578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_001
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1407,7 +1407,7 @@ GameObject:
   - component: {fileID: 8109841111666876819}
   - component: {fileID: 3558067360305550644}
   - component: {fileID: 876202075966870619}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_024
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1500,7 +1500,7 @@ GameObject:
   - component: {fileID: 1821748730820585134}
   - component: {fileID: 2154220849682311015}
   - component: {fileID: 876202075204733342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_005
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 6921347776487413858}
   - component: {fileID: 3107577262319210924}
   - component: {fileID: 876202076375989363}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_010
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1686,7 +1686,7 @@ GameObject:
   - component: {fileID: 714403916979615865}
   - component: {fileID: 788083293583905742}
   - component: {fileID: 876202075251845626}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_002
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1779,7 +1779,7 @@ GameObject:
   - component: {fileID: 8503385702218486937}
   - component: {fileID: 3058650985711745286}
   - component: {fileID: 876202075268927667}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_004
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 140986283307539236}
   - component: {fileID: 8195532872430031669}
   - component: {fileID: 876202075475858587}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_011
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -1965,7 +1965,7 @@ GameObject:
   - component: {fileID: 6412996749988467676}
   - component: {fileID: 6921570083008250039}
   - component: {fileID: 876202075003303218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_021
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2058,7 +2058,7 @@ GameObject:
   - component: {fileID: 3749481228321155441}
   - component: {fileID: 1529066537283764036}
   - component: {fileID: 876202076339398140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_018
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2151,7 +2151,7 @@ GameObject:
   - component: {fileID: 1817994230848008295}
   - component: {fileID: 7422140314036436379}
   - component: {fileID: 876202075716431189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_014
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2244,7 +2244,7 @@ GameObject:
   - component: {fileID: 5336540108759797688}
   - component: {fileID: 2460049456938718588}
   - component: {fileID: 876202075094850967}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_006
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2337,7 +2337,7 @@ GameObject:
   - component: {fileID: 8245033915368595365}
   - component: {fileID: 7127829254392352838}
   - component: {fileID: 876202076675230929}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_022
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2430,7 +2430,7 @@ GameObject:
   - component: {fileID: 5205336190824870893}
   - component: {fileID: 1195563098021993218}
   - component: {fileID: 876202075493104008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_2_frag_019
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2521,7 +2521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5283375386336879412}
   - component: {fileID: 876202075406572362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pillar_ani
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -2577,7 +2577,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9153856733585608999}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 38062a1222a460e46ad8412749c2ef65, type: 2}
   m_CullingMode: 0

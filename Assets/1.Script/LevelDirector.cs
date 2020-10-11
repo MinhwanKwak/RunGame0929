@@ -10,7 +10,8 @@ public class LevelDirector : MonoBehaviour
 
     public Text[] ClearTexts;
 
-    public GameObject Audio;
+    public GameObject SoundManagerobj;
+    
     private void Start()
     {
         int levelReadched = PlayerPrefs.GetInt("levelReached", 1);
@@ -88,14 +89,17 @@ public class LevelDirector : MonoBehaviour
 
     public void StageSceneMove(string Stagename)
     {
-      
+        Destroy(SoundManagerobj);
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
         LoadingManager.instance.beforeSceneSetup(Stagename);
     }
 
 
     public void BeforeScene()
     {
-        Destroy(Audio);
+
+        AudioManager.Instance.PlaySoundSfx("ButtonClick");
+        Destroy(SoundManagerobj);
         SceneManager.LoadScene("SelectScene");
         
     }

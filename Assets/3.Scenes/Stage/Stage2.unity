@@ -7844,7 +7844,7 @@ MonoBehaviour:
     FieldOfView: 36.01696
     OrthographicSize: 38.53339
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 10000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -16792,7 +16792,7 @@ PrefabInstance:
     - target: {fileID: 5312280934564349872, guid: a10ae246b4ef1b643851162999bb6c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.5
+      value: 1012
       objectReference: {fileID: 0}
     - target: {fileID: 5312280934564349872, guid: a10ae246b4ef1b643851162999bb6c0d,
         type: 3}
@@ -16802,7 +16802,7 @@ PrefabInstance:
     - target: {fileID: 5312280934564349872, guid: a10ae246b4ef1b643851162999bb6c0d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.8
+      value: 207
       objectReference: {fileID: 0}
     - target: {fileID: 5312280934564349872, guid: a10ae246b4ef1b643851162999bb6c0d,
         type: 3}
@@ -17671,7 +17671,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
+  far clip plane: 10000
   field of view: 36.01696
   orthographic: 0
   orthographic size: 30.95159
@@ -23650,7 +23650,7 @@ MonoBehaviour:
   SkyBoxNight: {fileID: 2100000, guid: 4d176d721cfef7140b150b22a936314e, type: 2}
   SkyBoxMorning: {fileID: 2100000, guid: 8c16fc7da0e5ced49956d40f80679ce2, type: 2}
   duration: 1
-  nightmorningtime: 1.6
+  nightmorningtime: 0.7
   Moon: {fileID: 33956008}
   Sun: {fileID: 2138727683}
 --- !u!1 &546368688
@@ -43549,11 +43549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 91140274}
     m_Modifications:
-    - target: {fileID: 876202075406572362, guid: ab7a41efba07a7447bdf8bda797a52d9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5283375386336879412, guid: ab7a41efba07a7447bdf8bda797a52d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43613,11 +43608,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pillar_ani
-      objectReference: {fileID: 0}
-    - target: {fileID: 9153856733585608999, guid: ab7a41efba07a7447bdf8bda797a52d9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7a41efba07a7447bdf8bda797a52d9, type: 3}
@@ -48598,51 +48588,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2271596878991637362, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2328577622015699427, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2328577622015699427, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2328577622015699427, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3213856924148512542, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3213856924148512542, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3271890088143972366, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3271890088143972366, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3271890088143972366, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4012869861288462226, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48752,21 +48697,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas_OV
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470721815999974861, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470721815999974861, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472209262018634226, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 193
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c, type: 3}

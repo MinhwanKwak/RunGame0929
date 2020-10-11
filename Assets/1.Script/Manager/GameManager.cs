@@ -39,8 +39,13 @@ public class GameManager : MonoBehaviour
 
         if (mission)
         {
+           int beforelevelReached =   PlayerPrefs.GetInt("levelReached");
+            if (beforelevelReached >= levelToUnlock)
+            {
+                return;
+            }
             PlayerPrefs.SetInt("levelReached", levelToUnlock);
-           // SceneManager.LoadScene("SelectScene");
+            
         }
         else
         {
