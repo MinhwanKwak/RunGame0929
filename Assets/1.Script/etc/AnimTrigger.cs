@@ -24,6 +24,10 @@ public class AnimTrigger : MonoBehaviour
 
                 AudioManager.Instance.PlaySoundSfx("BrokenHumanRock");
             }
+            else if(act.gameObject.layer == 14)
+            {
+                AudioManager.Instance.PlaySoundSfx("GroundTrigger");
+            }
         }
     }
 }

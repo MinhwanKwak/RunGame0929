@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: fefbd9af5cb60a54ea0fa82b752af1fb,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2557939}
   - component: {fileID: 2557940}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider15
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7793465}
   - component: {fileID: 7793466}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider17
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3375,6 +3375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Temple_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1697744632103932974, guid: f89ffe1bce3210b448002e4fc33e5b4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2437784849553516093, guid: f89ffe1bce3210b448002e4fc33e5b4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3442,7 +3447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66490842}
   - component: {fileID: 66490843}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9618,7 +9623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203414003}
   - component: {fileID: 203414004}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12007,7 +12012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 272157751}
   - component: {fileID: 272157752}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider10
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12984,7 +12989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303496683}
   - component: {fileID: 303496684}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20911,7 +20916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390323817}
   - component: {fileID: 390323818}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21196,7 +21201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395311511}
   - component: {fileID: 395311512}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider15
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21842,6 +21847,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845171820}
     m_Modifications:
+    - target: {fileID: 686129932008872107, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1277132805028244599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21906,6 +21916,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_Set 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060577360325234338, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677676055341278779, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813395918583342453, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8264179795499258599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
@@ -22894,7 +22919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449512334}
   - component: {fileID: 449512335}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23538,7 +23563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463885228}
   - component: {fileID: 463885229}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider22
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -24346,6 +24371,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1616015244}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -24355,6 +24385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -24416,6 +24451,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25522,7 +25567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537126072}
   - component: {fileID: 537126073}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider13
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -28016,6 +28061,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423642299}
     m_Modifications:
+    - target: {fileID: 686129932008872107, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1277132805028244599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -28080,6 +28130,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060577360325234338, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677676055341278779, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813395918583342453, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8264179795499258599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
@@ -28385,7 +28450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571536130}
   - component: {fileID: 571536131}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28936,7 +29001,6 @@ Transform:
   m_Children:
   - {fileID: 376034722}
   - {fileID: 218385598}
-  - {fileID: 1895836743}
   m_Father: {fileID: 1547961600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31934,6 +31998,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1616015244}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -31943,6 +32012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -32004,6 +32078,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -32895,7 +32979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711350287}
   - component: {fileID: 711350288}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider17
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32939,7 +33023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711652233}
   - component: {fileID: 711652234}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider22
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -34079,37 +34163,37 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 586771568}
+    m_TransformParent: {fileID: 1547961600}
     m_Modifications:
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -826.3605
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -351.13586
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 191.2949
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
@@ -34119,7 +34203,7 @@ PrefabInstance:
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067233, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
@@ -34138,6 +34222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
+      propertyPath: sfxPlayer.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
       propertyPath: BgmSlider
       value: 
       objectReference: {fileID: 278888397}
@@ -34146,6 +34235,36 @@ PrefabInstance:
       propertyPath: SfxSlider
       value: 
       objectReference: {fileID: 336489866}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
+      propertyPath: sfxPlayer.Array.data[14]
+      value: 
+      objectReference: {fileID: 1573820457}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
+      propertyPath: sfxPlayer.Array.data[15]
+      value: 
+      objectReference: {fileID: 1573820472}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
+      propertyPath: sfxPlayer.Array.data[16]
+      value: 
+      objectReference: {fileID: 1573820455}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
+      propertyPath: sfxPlayer.Array.data[17]
+      value: 
+      objectReference: {fileID: 1573820455}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
+      propertyPath: sfxPlayer.Array.data[18]
+      value: 
+      objectReference: {fileID: 1573820455}
+    - target: {fileID: 2443265462038067234, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+        type: 3}
+      propertyPath: sfxPlayer.Array.data[19]
+      value: 
+      objectReference: {fileID: 1573820455}
     - target: {fileID: 2443265462038067246, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
         type: 3}
       propertyPath: m_Name
@@ -34366,7 +34485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754651633}
   - component: {fileID: 754651634}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider12
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -34472,6 +34591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Forest_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697586802439345457, guid: b7fe218180881ab44b1c537202bae897,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4418900858821927405, guid: b7fe218180881ab44b1c537202bae897,
         type: 3}
@@ -39789,7 +39913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 910931235}
   - component: {fileID: 910931236}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39851,7 +39975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 912496994}
   - component: {fileID: 912496995}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider6
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -42924,6 +43048,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1704279482}
     m_Modifications:
+    - target: {fileID: 686129932008872107, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1277132805028244599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -42988,6 +43117,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_Set 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060577360325234338, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677676055341278779, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813395918583342453, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8264179795499258599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
@@ -43905,7 +44049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032155896}
   - component: {fileID: 1032155897}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider6
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -44970,6 +45114,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449512334}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -44979,6 +45128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -45040,6 +45194,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -45547,6 +45711,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Temple_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3763279102728627242, guid: 73bb170ad919098449e76a118b7624c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bb170ad919098449e76a118b7624c2, type: 3}
 --- !u!1 &1073778262
@@ -45559,7 +45728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073778263}
   - component: {fileID: 1073778264}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider6
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -48359,6 +48528,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449512334}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -48368,6 +48542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -48429,6 +48608,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -48624,6 +48813,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 390323817}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -48633,6 +48827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -48694,6 +48893,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -49094,7 +49303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173433834}
   - component: {fileID: 1173433835}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50441,7 +50650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1210560037}
   - component: {fileID: 1210560038}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider17
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -51569,7 +51778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1254009386}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Platform_Temple_Set 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54063,6 +54272,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423642299}
     m_Modifications:
+    - target: {fileID: 686129932008872107, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1277132805028244599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -54127,6 +54341,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_Set 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060577360325234338, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677676055341278779, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813395918583342453, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8264179795499258599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
@@ -55732,7 +55961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382193312}
   - component: {fileID: 1382193313}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider10
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -56328,6 +56557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697744632103932974, guid: f89ffe1bce3210b448002e4fc33e5b4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2437784849553516093, guid: f89ffe1bce3210b448002e4fc33e5b4e,
         type: 3}
@@ -57379,7 +57613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423642299}
   - component: {fileID: 1423642300}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59609,7 +59843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478271494}
   - component: {fileID: 1478271495}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60357,6 +60591,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182234}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -60366,6 +60605,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -60427,6 +60671,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -60729,7 +60983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1508925343}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Platform_01_Set 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61637,7 +61891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521617723}
   - component: {fileID: 1521617724}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62385,6 +62639,7 @@ Transform:
   - {fileID: 586771568}
   - {fileID: 1994077274}
   - {fileID: 1679568257}
+  - {fileID: 1895836743}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63153,6 +63408,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bb170ad919098449e76a118b7624c2, type: 3}
+--- !u!82 &1573820455 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1573820455, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 746029316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1573820457 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1895836758, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 746029316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1573820472 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 293010547, guid: 3b2ca7c600a8ae34aaa1d2d0f3d140d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 746029316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1573948677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64187,7 +64460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606651551}
   - component: {fileID: 1606651552}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider15
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -66038,7 +66311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616015244}
   - component: {fileID: 1616015245}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67667,7 +67940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663254846}
   - component: {fileID: 1663254847}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68541,7 +68814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1685754705}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Platform_Temple_Set 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68918,6 +69191,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 203414003}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -68927,6 +69205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -68988,6 +69271,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -69432,7 +69725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1704279482}
   - component: {fileID: 1704279483}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70028,6 +70321,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845171820}
     m_Modifications:
+    - target: {fileID: 686129932008872107, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1277132805028244599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -70092,6 +70390,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060577360325234338, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677676055341278779, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813395918583342453, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8264179795499258599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
@@ -71125,7 +71438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749407358}
   - component: {fileID: 1749407359}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71789,7 +72102,7 @@ PrefabInstance:
     - target: {fileID: 4012869861288462318, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6470721815999974861, guid: f1e3eb1b01d8f4446b43e18eb9e2a11c,
         type: 3}
@@ -72144,7 +72457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773873504}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Platform_01_Set 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72557,6 +72870,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182234}
     m_Modifications:
+    - target: {fileID: 2656937846012585653, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2775844264302316772, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -72566,6 +72884,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_01_Set 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461904904028045680, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3461904904028045683, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
@@ -72627,6 +72950,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c415aee3b21444c9bc839b735eb85e, type: 2}
+    - target: {fileID: 4519663123021019192, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573535347807800364, guid: ec7cb8549dcaa6546b661eb2b72607dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6153600248955074800, guid: ec7cb8549dcaa6546b661eb2b72607dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -73584,6 +73917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Forest_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2697586802439345457, guid: b7fe218180881ab44b1c537202bae897,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 4418900858821927405, guid: b7fe218180881ab44b1c537202bae897,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -74461,7 +74799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845171820}
   - component: {fileID: 1845171821}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75900,6 +76238,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1704279482}
     m_Modifications:
+    - target: {fileID: 686129932008872107, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1277132805028244599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -75964,6 +76307,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_Set 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060577360325234338, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677676055341278779, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813395918583342453, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8264179795499258599, guid: 1832b6b9a119e2c418cf810ab4e8ffb3,
         type: 3}
@@ -77696,7 +78054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921497666}
   - component: {fileID: 1921497667}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider22
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -79566,7 +79924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976749752}
   - component: {fileID: 1976749753}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81553,7 +81911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007182234}
   - component: {fileID: 2007182235}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82124,7 +82482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023519304}
   - component: {fileID: 2023519305}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83635,7 +83993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052766216}
   - component: {fileID: 2052766217}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84160,7 +84518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066061117}
   - component: {fileID: 2066061118}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerTile5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84817,6 +85175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Temple_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3763279102728627242, guid: 73bb170ad919098449e76a118b7624c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bb170ad919098449e76a118b7624c2, type: 3}
 --- !u!4 &2095916420 stripped
@@ -84996,7 +85359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097829326}
   - component: {fileID: 2097829327}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider10
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -86978,6 +87341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Forest_02
       objectReference: {fileID: 0}
+    - target: {fileID: 9029086145672976760, guid: 73ae4b52d8cb490499ec1d680edbc655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ae4b52d8cb490499ec1d680edbc655, type: 3}
 --- !u!4 &84473797909559352
@@ -88062,7 +88430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046798408361627983}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Platform_Temple_Set 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88977,6 +89345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Temple_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3763279102728627242, guid: 73bb170ad919098449e76a118b7624c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bb170ad919098449e76a118b7624c2, type: 3}
 --- !u!1001 &4541814149868114336
@@ -89484,6 +89857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Forest_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609958108720557431, guid: e314cce6b135cdd4b9293736b15dec49,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7917345977975349092, guid: e314cce6b135cdd4b9293736b15dec49,
         type: 3}
@@ -90171,7 +90549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7608391813911839075}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Platform_01_Set 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90491,6 +90869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform_Temple_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697744632103932974, guid: f89ffe1bce3210b448002e4fc33e5b4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2437784849553516093, guid: f89ffe1bce3210b448002e4fc33e5b4e,
         type: 3}
